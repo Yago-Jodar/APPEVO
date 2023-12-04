@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppEvo 0.9</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="anterior">Anterior</string>
+    <string name="imagen_de_fondo">imagen de fondo</string>
+    <string name="entrar">ENTRAR</string>
+</resources>
