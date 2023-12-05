@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace MuseumTool
+{
+    public class InfoCarrier
+    {
+        /// <summary>
+        /// Punto de entrada principal para la aplicación.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new museumToolGeneral());
+        }
+
+        public string collceccio { get; set; }
+        public string name { get; set; }
+        public int any { get; set; }
+        public string llocFabricacio { get; set; }
+        public string procedencia { get; set; }
+        public string fontEnergia { get; set; }
+        public float longitud { get; set; }
+        public float alcada { get; set; }
+        public float envergadura { get; set; }
+        public float pes { get; set; }
+        public float pesMax { get; set; }
+        public int cicle { get; set; }
+        public float cilindrada { get; set; }
+        public string potencia { get; set; }
+        public int velocitatMaxima { get; set; }
+        public int velocitatcreuer { get; set; }
+        public int capacitatDiposit { get; set; }
+        public float autonomia { get; set; }
+        public float autonomiaTemps { get; set; }        
+        public string formaIngres { get; set; }
+        public string fontIngres { get; set; }
+        public int numInventari { get; set; }
+        public string[] multimedia { get; set; }
+        public string descripcio { get; set; }
+    }
+}
