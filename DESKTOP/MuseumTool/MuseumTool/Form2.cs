@@ -5,20 +5,24 @@ using System.Linq;
 using System.Windows.Forms;
 using MuseumTool.JSON;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
     
 namespace MuseumTool
 {
     public partial class transportPersonesMercaderies : Form
     {
+        public Boolean initializationMode { get; set; }
+        public int numInventariSel {  get; set; }
 
+        
         public transportPersonesMercaderies()
         {
             InitializeComponent();
         }
 
         private void Form2_Load(object sender, EventArgs e)
-        { 
+        {
             // Crear una lista para almacenar objetos InfoCarrierTransportPersonesMercaderies
             List<Colleccions> colleccioList;
 
@@ -37,7 +41,33 @@ namespace MuseumTool
                     comboBoxColleccio.Items.Add(collection.nombre);
                 }
             }
-        
+
+            if (initializationMode && numInventariSel != 0)
+            {
+                // Cargar el JSON
+                string existingJson = File.ReadAllText(@"..\..\JSON\transportPersonesMercaderies.json");
+
+                // Deserializar a un array de objetos JSON
+                JArray jsonArray = JArray.Parse(existingJson);
+
+                // Buscar el objeto correspondiente al número de inventario seleccionado
+                JObject selectedObject = jsonArray.FirstOrDefault(obj => (int)obj["numInventari"] == numInventariSel) as JObject;
+
+                if (selectedObject != null)
+                {
+                    // Rellenar los campos con los datos del objeto encontrado
+                    comboBoxColleccio.SelectedItem = (string)selectedObject["collceccio"];
+                    textBoxNom.Text = (string)selectedObject["name"];
+                    // ... completar con el resto de los campos
+
+                    // Puedes seguir llenando los demás campos de manera similar
+                }
+                else
+                {
+                    MessageBox.Show("Objeto no encontrado para el número de inventario seleccionado.");
+                }
+            }
+
         }
 
 
@@ -118,7 +148,6 @@ namespace MuseumTool
             // Crear una instancia de InfoCarrier y poblar sus propiedades
             InfoCarrierTransportPersonesMercaderies info = new InfoCarrierTransportPersonesMercaderies
             {
-                
                 collceccio = comboBoxColleccio.SelectedItem?.ToString() ?? "", // Handle null for ComboBox
                 name = textBoxNom.Text,
                 any = ParseInt(textBoxAny.Text),
