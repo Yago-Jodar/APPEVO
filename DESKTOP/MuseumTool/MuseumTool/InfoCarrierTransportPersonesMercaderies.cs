@@ -17,6 +17,8 @@ namespace MuseumTool
         public int cicle { get; set; }
         public float cilindrada { get; set; }
         public string potencia { get; set; }
+        public float potenciaVal { get; set; }
+        public string potenciaType { get; set; }
         public int velocitatMaxima { get; set; }
         public int capacitatDiposit { get; set; }
         public float autonomia { get; set; }

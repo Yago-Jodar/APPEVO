@@ -44,7 +44,7 @@ namespace MuseumTool
 
         private void buttonModificar_Click(object sender, EventArgs e)
         {
-            dataGridViewObjectes.SelectedRows
+
         }
     }
 }

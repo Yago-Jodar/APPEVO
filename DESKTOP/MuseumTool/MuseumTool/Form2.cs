@@ -12,8 +12,8 @@ namespace MuseumTool
 {
     public partial class transportPersonesMercaderies : Form
     {
-        public Boolean initializationMode { get; set; }
-        public int numInventariSel {  get; set; }
+        public Boolean initializationMode = true;
+        public int numInventariSel = 2;
 
         
         public transportPersonesMercaderies()
@@ -58,9 +58,15 @@ namespace MuseumTool
                     // Rellenar los campos con los datos del objeto encontrado
                     comboBoxColleccio.SelectedItem = (string)selectedObject["collceccio"];
                     textBoxNom.Text = (string)selectedObject["name"];
-                    // ... completar con el resto de los campos
-
-                    // Puedes seguir llenando los demás campos de manera similar
+                    textBoxAny.Text = (string)selectedObject["any"];
+                    textBoxLlocFabricacio.Text = (string)selectedObject["llocFabricacio"];
+                    textBoxProcedencia.Text = (string)selectedObject["procedencia"];
+                    textBoxFontEnergia.Text = (string)selectedObject["fontEnergia"];
+                    textBoxCicle.Text = (string)selectedObject["cicle"];
+                    textBoxCilindrada.Text = (string)selectedObject["cilindrada"];
+                    textBoxPotencia.Text = (string)selectedObject["potenciaVal"];
+                    comboBoxPotencia.SelectedItem = (string)selectedObject["potenciaType"];
+                    textBoxVelMax.Text = (string)selectedObject["velocitatMax"];
                 }
                 else
                 {
@@ -157,6 +163,8 @@ namespace MuseumTool
                 cicle = ParseInt(textBoxCicle.Text),
                 cilindrada = ParseInt(textBoxCilindrada.Text),
                 potencia = TipoPotencia(textBoxPotencia.Text, comboBoxPotencia.SelectedItem?.ToString() ?? ""),
+                potenciaVal = ParseFloat(textBoxPotencia.Text),
+                potenciaType = comboBoxPotencia.SelectedItem?.ToString() ?? "",
                 velocitatMaxima = ParseInt(textBoxVelMax.Text),
                 autonomia = ParseFloat(textBoxAutonomia.Text),
                 capacitatDiposit = ParseInt(textBoxCapacitatDiposit.Text),
