@@ -75,6 +75,7 @@
             this.dataGridViewObjectes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewObjectes.Size = new System.Drawing.Size(547, 314);
             this.dataGridViewObjectes.TabIndex = 6;
+            this.dataGridViewObjectes.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewObjectes_RowEnter);
             // 
             // buttonModificar
             // 

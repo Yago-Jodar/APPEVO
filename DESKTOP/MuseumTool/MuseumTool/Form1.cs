@@ -12,6 +12,9 @@ namespace MuseumTool
 {
     public partial class museumToolGeneral : Form
     {
+        public Boolean initializationMode { get; set; }
+        public int numInventariSel { get; set; }
+
         public museumToolGeneral()
         {
             InitializeComponent();

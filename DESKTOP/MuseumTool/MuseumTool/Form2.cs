@@ -12,10 +12,9 @@ namespace MuseumTool
 {
     public partial class transportPersonesMercaderies : Form
     {
-        public Boolean initializationMode = true;
-        public int numInventariSel = 2;
+        public Boolean initializationMode { get; set; }
+        public int numInventariSel { get; set; }
 
-        
         public transportPersonesMercaderies()
         {
             InitializeComponent();
@@ -30,10 +29,10 @@ namespace MuseumTool
             if (File.Exists(Colleccions.colleccionsDir))
             {
                 // Leer el contenido del archivo JSON existente
-                string existingJson = File.ReadAllText(Colleccions.colleccionsDir);
+                string jsonColleccionsExists = File.ReadAllText(Colleccions.colleccionsDir);
 
                 // Deserializar el JSON existente a la lista de InfoCarrierTransportPersonesMercaderies
-                colleccioList = JsonConvert.DeserializeObject<List<Colleccions>>(existingJson);
+                colleccioList = JsonConvert.DeserializeObject<List<Colleccions>>(jsonColleccionsExists);
 
                 // Asigna las colecciones al ComboBox
                 foreach (var collection in colleccioList)
@@ -56,6 +55,7 @@ namespace MuseumTool
                 if (selectedObject != null)
                 {
                     // Rellenar los campos con los datos del objeto encontrado
+                    textBoxNumInventari.Text = (string)selectedObject["numInventari"];
                     comboBoxColleccio.SelectedItem = (string)selectedObject["collceccio"];
                     textBoxNom.Text = (string)selectedObject["name"];
                     textBoxAny.Text = (string)selectedObject["any"];
@@ -66,7 +66,17 @@ namespace MuseumTool
                     textBoxCilindrada.Text = (string)selectedObject["cilindrada"];
                     textBoxPotencia.Text = (string)selectedObject["potenciaVal"];
                     comboBoxPotencia.SelectedItem = (string)selectedObject["potenciaType"];
-                    textBoxVelMax.Text = (string)selectedObject["velocitatMax"];
+                    textBoxVelMax.Text = (string)selectedObject["velocitatMaxima"];
+                    textBoxCapacitatDiposit.Text = (string)selectedObject["capacitatDiposit"];
+                    textBoxAutonomia.Text = (string)selectedObject["autonomia"];
+                    textBoxFontIngres.Text = (string)selectedObject["fontIngres"];
+                    comboBoxFormaIngres.SelectedItem = (string)selectedObject["formaIngres"];
+                    textBoxFontIngres.Text = (string)selectedObject["fontIngres"];
+                    foreach (string path in selectedObject["multimedia"])
+                    {
+                        listBoxMultimedia.Items.Add(path);
+                    }
+                    textBoxDescripcio.Text = (string)selectedObject["descripcio"];
                 }
                 else
                 {
@@ -140,16 +150,17 @@ namespace MuseumTool
             if (File.Exists(jsonFilePath))
             {
                 // Leer el contenido del archivo JSON existente
-                string existingJson = File.ReadAllText(jsonFilePath);
+                JArray existingJson = JArray.Parse(File.ReadAllText(jsonFilePath));
 
                 // Deserializar el JSON existente a la lista de InfoCarrierTransportPersonesMercaderies
-                infoList = JsonConvert.DeserializeObject<List<InfoCarrierTransportPersonesMercaderies>>(existingJson);
+                infoList = existingJson.ToObject<List<InfoCarrierTransportPersonesMercaderies>>();
             }
             else
             {
                 // Si el archivo no existe, crear una nueva lista
                 infoList = new List<InfoCarrierTransportPersonesMercaderies>();
             }
+
 
             // Crear una instancia de InfoCarrier y poblar sus propiedades
             InfoCarrierTransportPersonesMercaderies info = new InfoCarrierTransportPersonesMercaderies
@@ -184,12 +195,11 @@ namespace MuseumTool
 
             infoList.Add(info);
 
-
             // Serializar la lista completa a JSON
-            string newJson = JsonConvert.SerializeObject(infoList);
+            JArray newJson = (JArray)JToken.FromObject(infoList);
 
             // Escribir el JSON de vuelta al archivo
-            File.WriteAllText(jsonFilePath, newJson);
+            File.WriteAllText(jsonFilePath, newJson.ToString());
 
             this.Close();
         }
