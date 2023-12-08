@@ -86,7 +86,6 @@ namespace MuseumTool
 
         }
 
-
         private void afegir_Click(object sender, EventArgs e)
         {
             OpenFileDialog file = new OpenFileDialog();
