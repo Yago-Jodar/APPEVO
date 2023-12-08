@@ -90,7 +90,7 @@ namespace MuseumTool
         private void afegir_Click(object sender, EventArgs e)
         {
             OpenFileDialog file = new OpenFileDialog();
-            file.Filter = "Imatges amb format (*.jpg, *.jpeg, *.png, *.tiff)|*.jpg;*.jpeg;*.png;*.tiff";
+            file.Filter = "Imatges o videos amb format (*.jpg, *.jpeg, *.png, *.tiff, *.mp4)|*.jpg;*.jpeg;*.png;*.tiff;*.mp4";
             file.Multiselect = true;
 
             DialogResult result = file.ShowDialog();
@@ -147,20 +147,36 @@ namespace MuseumTool
             List<InfoCarrierTransportPersonesMercaderies> infoList;
 
             // Verificar si el archivo JSON ya existe
-            if (File.Exists(jsonFilePath))
-            {
-                // Leer el contenido del archivo JSON existente
-                JArray existingJson = JArray.Parse(File.ReadAllText(jsonFilePath));
-
-                // Deserializar el JSON existente a la lista de InfoCarrierTransportPersonesMercaderies
-                infoList = existingJson.ToObject<List<InfoCarrierTransportPersonesMercaderies>>();
-            }
-            else
+            if (!File.Exists(jsonFilePath))
             {
                 // Si el archivo no existe, crear una nueva lista
                 infoList = new List<InfoCarrierTransportPersonesMercaderies>();
             }
 
+            // Leer el contenido del archivo JSON existente
+            JArray existingJson = JArray.Parse(File.ReadAllText(jsonFilePath));
+
+            // Deserializar el JSON existente a la lista de InfoCarrierTransportPersonesMercaderies
+            infoList = existingJson.ToObject<List<InfoCarrierTransportPersonesMercaderies>>();
+
+            // Buscar el objeto correspondiente al número de inventario seleccionado
+            JObject currentNumInventari = existingJson.FirstOrDefault(obj => (int)obj["numInventari"] == ParseInt(textBoxNumInventari.Text)) as JObject;
+
+            if ((int)currentNumInventari["numInventari"] == ParseInt(textBoxNumInventari.Text))
+            {
+                DialogResult overwrite = MessageBox.Show("El número d'inventari sel·leccionat, ja existeix, pertany al objecte amb el nom " + currentNumInventari["name"] + ", si continues, s'esborrarà l'objecte " + currentNumInventari["name"] + ", i en el seu lloc s'aplicaràn les noves dades a l'objecte amb número d'inventari " + currentNumInventari["numInventari"] + "\nDesitja continuar?", "Atenció", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                
+                if (overwrite == DialogResult.Yes)
+                {
+                    infoList.RemoveAt(existingJson.IndexOf(currentNumInventari));
+                }
+            }
+
+            if (textBoxNumInventari.Text == "" || ParseInt(textBoxNumInventari.Text) == 0)
+            {
+                MessageBox.Show($"El número d'inventari es un camp obligatori", "Atenció", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             // Crear una instancia de InfoCarrier y poblar sus propiedades
             InfoCarrierTransportPersonesMercaderies info = new InfoCarrierTransportPersonesMercaderies
@@ -185,15 +201,15 @@ namespace MuseumTool
                 multimedia = GetListBoxItems(listBoxMultimedia),
                 descripcio = textBoxDescripcio.Text
             };
+            
+            infoList.Add(info);
 
-            DialogResult result = MessageBox.Show($"Els camps que no posseeixin informació o en els quals aquests valors siguin incorrectes, seràn assignats a un valor estàndar: ", "Atenció", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            DialogResult result = MessageBox.Show($"Els camps que no posseeixin informació o en els quals aquests valors siguin incorrectes, seràn assignats a un valor estàndar: ", "Atenció", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.No)
             {
-                // El usuario eligió no sobrescribir, salir del método
+                // El usuario eligió no guardar la entrada, salir del método
                 return;
             }
-
-            infoList.Add(info);
 
             // Serializar la lista completa a JSON
             JArray newJson = (JArray)JToken.FromObject(infoList);
@@ -238,14 +254,14 @@ namespace MuseumTool
         }
 
         // Helper method to get selected items from a ListBox
-        private string[] GetListBoxItems(ListBox listBox)
+        private JArray GetListBoxItems(ListBox listBox)
         {
-            List<string> items = new List<string>();
+            JArray itemsArray = new JArray();
             foreach (var item in listBox.Items)
             {
-                items.Add(item.ToString());
+                itemsArray.Add(item.ToString());
             }
-            return items.ToArray();
+            return itemsArray;
         }
 
         //Helper method to add potencia to its specific power type

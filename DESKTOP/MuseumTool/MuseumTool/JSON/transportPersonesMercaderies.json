@@ -44,28 +44,7 @@
     "descripcio": "Hace deporte poco más"
   },
   {
-    "collceccio": "pepeJUAN",
-    "name": "Yuri",
-    "any": 2003,
-    "llocFabricacio": "Brasil",
-    "procedencia": "Italia",
-    "fontEnergia": "Serotonina (cattussintesis)",
-    "cicle": 2,
-    "cilindrada": 4.0,
-    "potencia": "0.2 HP",
-    "potenciaVal": 2.0,
-    "potenciaType": "HP",
-    "velocitatMaxima": 25,
-    "capacitatDiposit": 3,
-    "autonomia": 7.0,
-    "formaIngres": "Cessió",
-    "fontIngres": "Antoni",
-    "numInventari": 3,
-    "multimedia": [],
-    "descripcio": "Samba du brasil"
-  },
-  {
-    "collceccio": "Enric",
+    "collceccio": "Pogere",
     "name": "Channel",
     "any": 2016,
     "llocFabricacio": "Barcelona",
@@ -73,7 +52,7 @@
     "fontEnergia": "fotosíntesis",
     "cicle": 2,
     "cilindrada": 4.0,
-    "potencia": "0.05 HP",
+    "potencia": "5 HP",
     "potenciaVal": 5.0,
     "potenciaType": "HP",
     "velocitatMaxima": 30,
@@ -82,7 +61,10 @@
     "formaIngres": "Dipòsit",
     "fontIngres": "Antoni",
     "numInventari": 4,
-    "multimedia": [],
+    "multimedia": [
+      "..\\..\\multimedia\\VID_20181205_185249.mp4",
+      "..\\..\\multimedia\\VID_20181217_214524.mp4"
+    ],
     "descripcio": "gato"
   }
 ]

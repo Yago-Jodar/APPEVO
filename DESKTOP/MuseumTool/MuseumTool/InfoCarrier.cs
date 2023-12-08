@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -43,7 +44,7 @@ namespace MuseumTool
         public string formaIngres { get; set; }
         public string fontIngres { get; set; }
         public int numInventari { get; set; }
-        public string[] multimedia { get; set; }
+        public JArray multimedia { get; set; }
         public string descripcio { get; set; }
     }
 }
