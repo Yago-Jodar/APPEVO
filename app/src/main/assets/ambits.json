@@ -1,0 +1,44 @@
+[
+    {
+        "ID": 0,
+        "Title":"Els inicis de l'aviació",
+        "Description":"L’any 1903 els germans Wright van aconseguir volar amb un aparell tripulat i\nautopropulsat. A Catalunya hi va haver dos intents seriosos en la construcció\nd'avions: el 1908 ho va intentar Gaspar Brunet a l'hipòdrom del Prat de\nLlobregat i Joan Oliver a la platja de la Malvarosa de València el 1909, però cap\nd'ells no va arribar a poder volar ni aterrar correctament. No va ser fins l'11 de\nfebrer de 1910 que Lucien Mamet, amb un Blériot XI, va realitzar un vol de dos\nminuts i vint segons i 70 metres d'altura a l&#39;hipòdrom de Can Tunis de\nBarcelona.",
+        "Multimedia":"C:\\Users\\shune\\OneDrive\\Escritorio\\AppEvo\\Imágenes\\aviación\\aviacion.png"
+    },
+    {
+        "ID": 1,
+        "Title":"Transport de persones i mercaderies",
+        "Description":"Podem dividir el transport de persones i mercaderies en tres categories:\nLa primera correspon al moviment de càrregues que depèn de l’energia\nhumana per desplaçar-se. Per una banda, tenim les transportines, portades per\ndos homes que subjectaven els quatre pals de fusta. Per l'altra, tenim les\nbicicletes, el primer sistema de transport propulsat sobre dues rodes.\nEl segon grup contempla tots aquells vehicles que poden desplaçar-se gràcies\na la utilització d'animals domesticats com a força motriu. Les tartanes en són un\nexemple, ja que permetien transportar persones, però estaven més emprades\nper la càrrega de mercaderies. Fins al segle XIX, les tartanes i els carros\nconstituïen una part important de l'oferta de transport de bens.\nFinalment, tenim aquells vehicles que funcionen gràcies a l'aprofitament i l'ús\nde combustibles. Gràcies a la invenció del motor de gasolina es construeixen\nels camions, grans vehicles destinats al transport de càrregues.", 
+        "Multimedia":"C:\\Users\\shune\\OneDrive\\Escritorio\\AppEvo\\Imágenes\\aviación\\transport.png"
+    },
+    {
+        "ID": 2,
+        "Title":"Motocicletes catalanes",
+        "Description":"Els primers vehicles automòbils de dues rodes tenien moltes similituds en\nestructura amb les bicicletes, a les que s’hi afegia diferents tecnologies de\nl'època, en especial del motor. La majoria dels models exposats són de la\nmarca Montesa, fundada per Pere Permanyer l&#39;any 1945, marca líder a la\npenínsula Ibèrica durant anys.",
+        "Multimedia":""
+    },
+    {
+        "ID": 3,
+        "Title":"Bombers",
+        "Description":"Els cossos de bombers vetllen per la seguretat de la ciutadania i els seus béns.\nAntigament, per apagar focs, els antiincendis empraven vehicles arrossegats\nper ells mateixos i equipats amb una bomba d&#39;aigua i una mànega d'incendis.\nEn l'actualitat, els camions apaga focs fan ús de les boques d'aigua del carrer.\nEls vehicles que conformen l'àmbit expositiu són una mostra de la col·lecció de\ncamions i estris que utilitzaven els bombers de Terrassa.",
+        "Multimedia":""
+    },
+    {
+        "ID": 4,
+        "Title":"Microcotxes i prototips únics",
+        "Description":"",
+        "Multimedia":""
+    },
+    {
+        "ID": 5,
+        "Title":"Energies alternatives: automòbils per propulsió elèctrica i per vapor",
+        "Description":"",
+        "Multimedia":""
+    },
+    {
+        "ID": 6,
+        "Title":"La revolució de l’utilitari",
+        "Description":"La burgesia, atreta per les novetats de l'estranger, va introduir el món del cotxe\na Catalunya. Disposar d'un automòbil privat va convertir-se en signe de\ndistinció i posició social a l'abast de pocs. A Barcelona es fabricaven models de\nla marca Hispano Suiza, empresa que va ser clau en la història de l'utilitari\ncatalà a començaments del segle XX.",
+        "Multimedia":""
+    }
+]

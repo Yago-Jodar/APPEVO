@@ -1,3 +1,3 @@
 package com.example.appevo09
 
-class Ambit ( val title: String, val description: String, val image: Int)
+class Ambit ( var id: Int, var title: String, var description: String, var image: Int)

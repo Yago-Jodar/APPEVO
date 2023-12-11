@@ -13,19 +13,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/bandera_cat"/>
-    </item>
-
-    <item>
-        <bitmap
-            android:gravity="center"
-            android:src="@drawable/bandera_uk"/>
-    </item>
-
-    <item>
-        <bitmap
-            android:gravity="center"
-            android:src="@drawable/bandera_es"/>
+            android:src="@drawable/fondo"/>
     </item>
 </layer-list>
 
