@@ -1,26 +1,5 @@
 [
   {
-    "numInventari": 4,
-    "collceccio": "Pogere",
-    "name": "Channel",
-    "any": 2016,
-    "llocFabricacio": "Barcelona",
-    "procedencia": "Barcelona",
-    "fontEnergia": "fotosíntesis",
-    "cicle": 2,
-    "cilindrada": 4.0,
-    "potencia": "5 HP",
-    "potenciaVal": 5.0,
-    "potenciaType": "HP",
-    "velocitatMaxima": 30,
-    "capacitatDiposit": 1,
-    "autonomia": 5.0,
-    "formaIngres": "Dipòsit",
-    "fontIngres": "Antoni",
-    "multimedia": [],
-    "descripcio": "gato"
-  },
-  {
     "numInventari": 1,
     "collceccio": "Yago",
     "name": "Yagueras",

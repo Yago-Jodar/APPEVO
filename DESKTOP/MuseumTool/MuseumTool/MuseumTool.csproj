@@ -68,7 +68,7 @@
       <DependentUpon>Form9.cs</DependentUpon>
     </Compile>
     <Compile Include="InfoCarrierTransportPersonesMercaderies.cs" />
-    <Compile Include="Class2.cs" />
+    <Compile Include="InfoCarrierBombers.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,7 +106,7 @@
       <DependentUpon>Form6.cs</DependentUpon>
     </Compile>
     <Compile Include="InfoCarrier.cs" />
-    <Compile Include="JSON\Colleccions.cs" />
+    <Compile Include="Colleccions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -144,6 +144,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="JSON\bombers.json" />
     <None Include="JSON\transportPersonesMercaderies.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

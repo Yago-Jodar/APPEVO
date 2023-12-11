@@ -69,7 +69,6 @@ namespace MuseumTool
                     textBoxVelMax.Text = (string)selectedObject["velocitatMaxima"];
                     textBoxCapacitatDiposit.Text = (string)selectedObject["capacitatDiposit"];
                     textBoxAutonomia.Text = (string)selectedObject["autonomia"];
-                    textBoxFontIngres.Text = (string)selectedObject["fontIngres"];
                     comboBoxFormaIngres.SelectedItem = (string)selectedObject["formaIngres"];
                     textBoxFontIngres.Text = (string)selectedObject["fontIngres"];
                     foreach (string path in selectedObject["multimedia"])

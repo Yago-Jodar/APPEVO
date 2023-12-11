@@ -28,15 +28,18 @@ namespace MuseumTool
             {
                 case "Transport de persones i mercaderies":
                     ambitDir = @"..\..\JSON\transportPersonesMercaderies.json";
-                    JArray ambitSeleccionat = JArray.Parse(File.ReadAllText(ambitDir));
+                    ambitGeneral = JArray.Parse(File.ReadAllText(ambitDir));
 
-                    dataGridViewObjectes.DataSource = ambitSeleccionat;
-                    ambitGeneral = ambitSeleccionat;
+                    dataGridViewObjectes.DataSource = ambitGeneral;
                     ubicacioDesat = ambitDir;
                     break;
 
                 case "Bombers":
-                    ambitDir = @"..\..\JSON\transportPersonesMercaderies.json";
+                    ambitDir = @"..\..\JSON\bombers.json";
+                    ambitGeneral = JArray.Parse(File.ReadAllText(ambitDir));
+
+                    dataGridViewObjectes.DataSource = ambitGeneral;
+                    ubicacioDesat = ambitDir;
                     break;
 
                 default:
@@ -61,17 +64,23 @@ namespace MuseumTool
             switch (ambitName)
             {
                 case "Transport de persones i mercaderies":
-                    transportPersonesMercaderies enableEditMode = new transportPersonesMercaderies();
+                    transportPersonesMercaderies enableEditModeTPM = new transportPersonesMercaderies();
 
-                    enableEditMode.initializationMode = true;
-                    enableEditMode.numInventariSel = IdSeleccionado;
+                    enableEditModeTPM.initializationMode = true;
+                    enableEditModeTPM.numInventariSel = IdSeleccionado;
 
-                    enableEditMode.Show();
+                    enableEditModeTPM.Show();
                     this.Close();
                     break;
 
                 case "Bombers":
+                    bombers enableEditModeB = new bombers();
 
+                    enableEditModeB.initializationMode = true;
+                    enableEditModeB.numInventariSel = IdSeleccionado;
+
+                    enableEditModeB.Show();
+                    this.Close();
                     break;
 
                 default:
@@ -88,8 +97,7 @@ namespace MuseumTool
 
         private void buttondesar_Click(object sender, EventArgs e)
         {
-            JArray modifiedJSON = (JArray)JToken.FromObject(ambitGeneral);
-            File.WriteAllText(ubicacioDesat, modifiedJSON.ToString());
+            File.WriteAllText(ubicacioDesat, ambitGeneral.ToString());
             this.Close();
         }
     }

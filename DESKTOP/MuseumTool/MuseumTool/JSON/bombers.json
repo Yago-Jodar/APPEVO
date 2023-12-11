@@ -1,0 +1,21 @@
+[
+  {
+    "numInventari": 1,
+    "collceccio": "Yago",
+    "name": "YagoBombers",
+    "any": 2004,
+    "llocFabricacio": "Barna",
+    "cicle": 2,
+    "cilindrada": 240.0,
+    "potencia": "220 KW",
+    "potenciaVal": 220.0,
+    "potenciaType": "KW",
+    "velocitatMaxima": 220,
+    "capacitatDiposit": 123,
+    "autonomia": 20.0,
+    "formaIngres": "Compra",
+    "fontIngres": "Yago",
+    "multimedia": [],
+    "descripcio": "papas fritas"
+  }
+]
