@@ -116,6 +116,7 @@
             this.buttondesar.TabIndex = 12;
             this.buttondesar.Text = "Desar Canvis";
             this.buttondesar.UseVisualStyleBackColor = true;
+            this.buttondesar.Click += new System.EventHandler(this.buttondesar_Click);
             // 
             // visualizadorObjetos
             // 

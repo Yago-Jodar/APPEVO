@@ -7,7 +7,7 @@ using MuseumTool.JSON;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-    
+
 namespace MuseumTool
 {
     public partial class transportPersonesMercaderies : Form
@@ -100,15 +100,15 @@ namespace MuseumTool
                     string filename = Path.GetFileName(filePath);
                     string destinationPath = Path.Combine(@"..\..\multimedia", filename);
 
-                        //Handle already existent file error
-                        try
-                        {
-                            File.Copy(filePath, destinationPath);
-                        }
-                        catch
-                        {
-                            MessageBox.Show($"L'imatge ja existeix: {filename}", "Atenció", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                    //Handle already existent file error
+                    try
+                    {
+                        File.Copy(filePath, destinationPath);
+                    }
+                    catch
+                    {
+                        MessageBox.Show($"L'imatge ja existeix: {filename}", "Atenció", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     // Verify if the file already exists in listBoxMultimedia
                     if (!listBoxMultimedia.Items.Contains(destinationPath))
                     {
@@ -161,20 +161,33 @@ namespace MuseumTool
             // Buscar el objeto correspondiente al número de inventario seleccionado
             JObject currentNumInventari = existingJson.FirstOrDefault(obj => (int)obj["numInventari"] == ParseInt(textBoxNumInventari.Text)) as JObject;
 
-            if ((int)currentNumInventari["numInventari"] == ParseInt(textBoxNumInventari.Text))
-            {
-                DialogResult overwrite = MessageBox.Show("El número d'inventari sel·leccionat, ja existeix, pertany al objecte amb el nom " + currentNumInventari["name"] + ", si continues, s'esborrarà l'objecte " + currentNumInventari["name"] + ", i en el seu lloc s'aplicaràn les noves dades a l'objecte amb número d'inventari " + currentNumInventari["numInventari"] + "\nDesitja continuar?", "Atenció", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                
-                if (overwrite == DialogResult.Yes)
-                {
-                    infoList.RemoveAt(existingJson.IndexOf(currentNumInventari));
-                }
-            }
-
             if (textBoxNumInventari.Text == "" || ParseInt(textBoxNumInventari.Text) == 0)
             {
                 MessageBox.Show($"El número d'inventari es un camp obligatori", "Atenció", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+
+            if (currentNumInventari == null)
+            {
+                int numInventariExists = 0;
+
+                if (numInventariExists == ParseInt(textBoxNumInventari.Text))
+                {
+                    DialogResult overwrite = MessageBox.Show("El valor sel·leccionat com a número d'inventari no es vàlid\nSi us plau, sel·lecciona un número d'invetari vàlid", "Atenció", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            else
+            {
+                if ((int)currentNumInventari["numInventari"] == ParseInt(textBoxNumInventari.Text))
+                {
+                    DialogResult overwrite = MessageBox.Show("El número d'inventari sel·leccionat, ja existeix, pertany al objecte amb el nom " + currentNumInventari["name"] + ", si continues, s'esborrarà l'objecte " + currentNumInventari["name"] + ", i en el seu lloc s'aplicaràn les noves dades a l'objecte amb número d'inventari " + currentNumInventari["numInventari"] + "\nDesitja continuar?", "Atenció", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (overwrite == DialogResult.Yes)
+                    {
+                        infoList.RemoveAt(existingJson.IndexOf(currentNumInventari));
+                    }
+                }
             }
 
             // Crear una instancia de InfoCarrier y poblar sus propiedades
@@ -200,7 +213,7 @@ namespace MuseumTool
                 multimedia = GetListBoxItems(listBoxMultimedia),
                 descripcio = textBoxDescripcio.Text
             };
-            
+
             infoList.Add(info);
 
             DialogResult result = MessageBox.Show($"Els camps que no posseeixin informació o en els quals aquests valors siguin incorrectes, seràn assignats a un valor estàndar: ", "Atenció", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -218,7 +231,6 @@ namespace MuseumTool
 
             this.Close();
         }
-
 
         // Helper method to parse integers with error handling
         private int ParseInt(string input)
@@ -247,7 +259,7 @@ namespace MuseumTool
             else
             {
                 // Handle parsing error as needed
-                MessageBox.Show($"Invalid numeric input, will be set at '0': { input}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Invalid numeric input, will be set at '0': {input}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0.0f; // or throw an exception or handle differently
             }
         }

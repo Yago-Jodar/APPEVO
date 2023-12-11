@@ -11,6 +11,9 @@ namespace MuseumTool
         public int IdSeleccionado { get; private set; }
         public string ambitName {  get; private set; }
         public JArray ambitGeneral { get; set; }
+        public int selectedRowIndex { get; private set; }
+        public string ubicacioDesat {  get; private set; }
+
         public visualizadorObjetos()
         {
             InitializeComponent();
@@ -29,6 +32,7 @@ namespace MuseumTool
 
                     dataGridViewObjectes.DataSource = ambitSeleccionat;
                     ambitGeneral = ambitSeleccionat;
+                    ubicacioDesat = ambitDir;
                     break;
 
                 case "Bombers":
@@ -48,6 +52,8 @@ namespace MuseumTool
                 // Obtiene el valor de la celda "numInventari" de la fila seleccionada
                 int idSeleccionado = Convert.ToInt32(dataGridViewObjectes.Rows[e.RowIndex].Cells["numInventari"].Value);
                 IdSeleccionado = idSeleccionado;
+
+                selectedRowIndex = e.RowIndex;
             }
         }
         private void buttonModificar_Click(object sender, EventArgs e)
@@ -76,7 +82,15 @@ namespace MuseumTool
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
+            ambitGeneral.RemoveAt(selectedRowIndex);
+            dataGridViewObjectes.Refresh();
+        }
 
+        private void buttondesar_Click(object sender, EventArgs e)
+        {
+            JArray modifiedJSON = (JArray)JToken.FromObject(ambitGeneral);
+            File.WriteAllText(ubicacioDesat, modifiedJSON.ToString());
+            this.Close();
         }
     }
 }
