@@ -1,28 +1,6 @@
 [
   {
-    "collceccio": "Yago",
-    "name": "Yagueras",
-    "any": 2004,
-    "llocFabricacio": "Espanya",
-    "procedencia": "Barcelona",
-    "fontEnergia": "Comida",
-    "cicle": 2,
-    "cilindrada": 4.0,
-    "potencia": "0,23 HP",
-    "potenciaVal": 0.23,
-    "potenciaType": "HP",
-    "velocitatMaxima": 24,
-    "capacitatDiposit": 1,
-    "autonomia": 12.0,
-    "formaIngres": "Cessió",
-    "fontIngres": "Itziar i Jorge",
-    "numInventari": 1,
-    "multimedia": [
-      "..\\..\\multimedia\\CARNET.jpg"
-    ],
-    "descripcio": "Estudiant de CEP de segon any que cursa 2 de DAM"
-  },
-  {
+    "numInventari": 2,
     "collceccio": "Marc",
     "name": "asunian12",
     "any": 2004,
@@ -39,11 +17,11 @@
     "autonomia": 2.0,
     "formaIngres": "Compra",
     "fontIngres": "",
-    "numInventari": 2,
     "multimedia": [],
     "descripcio": "Hace deporte poco más"
   },
   {
+    "numInventari": 4,
     "collceccio": "Pogere",
     "name": "Channel",
     "any": 2016,
@@ -60,11 +38,28 @@
     "autonomia": 5.0,
     "formaIngres": "Dipòsit",
     "fontIngres": "Antoni",
-    "numInventari": 4,
-    "multimedia": [
-      "..\\..\\multimedia\\VID_20181205_185249.mp4",
-      "..\\..\\multimedia\\VID_20181217_214524.mp4"
-    ],
+    "multimedia": [],
     "descripcio": "gato"
+  },
+  {
+    "numInventari": 1,
+    "collceccio": "Yago",
+    "name": "Yagueras",
+    "any": 2004,
+    "llocFabricacio": "Espanya",
+    "procedencia": "Barcelona",
+    "fontEnergia": "Comida",
+    "cicle": 2,
+    "cilindrada": 4.0,
+    "potencia": "23 HP",
+    "potenciaVal": 23.0,
+    "potenciaType": "HP",
+    "velocitatMaxima": 24,
+    "capacitatDiposit": 1,
+    "autonomia": 12.0,
+    "formaIngres": "Cessió",
+    "fontIngres": "Itziar i Jorge",
+    "multimedia": [],
+    "descripcio": "Estudiant de CEP de segon any que cursa 2 de DAM"
   }
 ]

@@ -40,7 +40,6 @@
             this.buttonEditarColleccions = new System.Windows.Forms.Button();
             this.buttonModificarPreguntes = new System.Windows.Forms.Button();
             this.buttonCrearPregunta = new System.Windows.Forms.Button();
-            this.buttonEliminarObjecte = new System.Windows.Forms.Button();
             this.buttonMostrarInfoItemsMuseu = new System.Windows.Forms.Button();
             this.tancar = new System.Windows.Forms.Button();
             this.groupBoxCrear.SuspendLayout();
@@ -127,7 +126,6 @@
             this.groupBoxAdministracio.Controls.Add(this.buttonEditarColleccions);
             this.groupBoxAdministracio.Controls.Add(this.buttonModificarPreguntes);
             this.groupBoxAdministracio.Controls.Add(this.buttonCrearPregunta);
-            this.groupBoxAdministracio.Controls.Add(this.buttonEliminarObjecte);
             this.groupBoxAdministracio.Controls.Add(this.buttonMostrarInfoItemsMuseu);
             this.groupBoxAdministracio.Location = new System.Drawing.Point(298, 12);
             this.groupBoxAdministracio.Name = "groupBoxAdministracio";
@@ -138,7 +136,7 @@
             // 
             // buttonEditarColleccions
             // 
-            this.buttonEditarColleccions.Location = new System.Drawing.Point(6, 123);
+            this.buttonEditarColleccions.Location = new System.Drawing.Point(6, 71);
             this.buttonEditarColleccions.Name = "buttonEditarColleccions";
             this.buttonEditarColleccions.Size = new System.Drawing.Size(268, 46);
             this.buttonEditarColleccions.TabIndex = 12;
@@ -148,7 +146,7 @@
             // 
             // buttonModificarPreguntes
             // 
-            this.buttonModificarPreguntes.Location = new System.Drawing.Point(6, 227);
+            this.buttonModificarPreguntes.Location = new System.Drawing.Point(6, 175);
             this.buttonModificarPreguntes.Name = "buttonModificarPreguntes";
             this.buttonModificarPreguntes.Size = new System.Drawing.Size(268, 46);
             this.buttonModificarPreguntes.TabIndex = 10;
@@ -157,22 +155,13 @@
             // 
             // buttonCrearPregunta
             // 
-            this.buttonCrearPregunta.Location = new System.Drawing.Point(6, 175);
+            this.buttonCrearPregunta.Location = new System.Drawing.Point(6, 123);
             this.buttonCrearPregunta.Name = "buttonCrearPregunta";
             this.buttonCrearPregunta.Size = new System.Drawing.Size(268, 46);
             this.buttonCrearPregunta.TabIndex = 9;
             this.buttonCrearPregunta.Text = "Crear Pregunta";
             this.buttonCrearPregunta.UseVisualStyleBackColor = true;
             this.buttonCrearPregunta.Click += new System.EventHandler(this.buttonCrearPreguna_Click);
-            // 
-            // buttonEliminarObjecte
-            // 
-            this.buttonEliminarObjecte.Location = new System.Drawing.Point(6, 71);
-            this.buttonEliminarObjecte.Name = "buttonEliminarObjecte";
-            this.buttonEliminarObjecte.Size = new System.Drawing.Size(268, 46);
-            this.buttonEliminarObjecte.TabIndex = 8;
-            this.buttonEliminarObjecte.Text = "Eliminar objecte";
-            this.buttonEliminarObjecte.UseVisualStyleBackColor = true;
             // 
             // buttonMostrarInfoItemsMuseu
             // 
@@ -207,7 +196,6 @@
             this.MinimumSize = new System.Drawing.Size(606, 447);
             this.Name = "museumToolGeneral";
             this.Text = "Museum Tool General";
-            this.Load += new System.EventHandler(this.museumToolGeneral_Load);
             this.groupBoxCrear.ResumeLayout(false);
             this.groupBoxAdministracio.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -228,7 +216,6 @@
         private System.Windows.Forms.Button buttonModificarPreguntes;
         private System.Windows.Forms.Button buttonCrearPregunta;
         private System.Windows.Forms.Button buttonEditarColleccions;
-        private System.Windows.Forms.Button buttonEliminarObjecte;
     }
 }
 

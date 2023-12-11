@@ -34,7 +34,7 @@
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonCercar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttondesar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewObjectes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +76,7 @@
             this.dataGridViewObjectes.Size = new System.Drawing.Size(547, 314);
             this.dataGridViewObjectes.TabIndex = 6;
             this.dataGridViewObjectes.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewObjectes_RowEnter);
+            this.dataGridViewObjectes.DoubleClick += new System.EventHandler(this.buttonModificar_Click);
             // 
             // buttonModificar
             // 
@@ -95,6 +96,7 @@
             this.buttonEliminar.TabIndex = 10;
             this.buttonEliminar.Text = "Eliminar objecte";
             this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonCercar
             // 
@@ -106,21 +108,21 @@
             this.buttonCercar.UseVisualStyleBackColor = true;
             this.buttonCercar.Click += new System.EventHandler(this.buttonCercar_Click);
             // 
-            // button1
+            // buttondesar
             // 
-            this.button1.Location = new System.Drawing.Point(15, 411);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(547, 46);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Desar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttondesar.Location = new System.Drawing.Point(15, 411);
+            this.buttondesar.Name = "buttondesar";
+            this.buttondesar.Size = new System.Drawing.Size(547, 46);
+            this.buttondesar.TabIndex = 12;
+            this.buttondesar.Text = "Desar Canvis";
+            this.buttondesar.UseVisualStyleBackColor = true;
             // 
             // visualizadorObjetos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(574, 467);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttondesar);
             this.Controls.Add(this.buttonCercar);
             this.Controls.Add(this.buttonEliminar);
             this.Controls.Add(this.buttonModificar);
@@ -143,6 +145,6 @@
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonCercar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttondesar;
     }
 }

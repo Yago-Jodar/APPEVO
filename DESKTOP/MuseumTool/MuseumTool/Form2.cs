@@ -180,6 +180,7 @@ namespace MuseumTool
             // Crear una instancia de InfoCarrier y poblar sus propiedades
             InfoCarrierTransportPersonesMercaderies info = new InfoCarrierTransportPersonesMercaderies
             {
+                numInventari = ParseInt(textBoxNumInventari.Text),
                 collceccio = comboBoxColleccio.SelectedItem?.ToString() ?? "", // Handle null for ComboBox
                 name = textBoxNom.Text,
                 any = ParseInt(textBoxAny.Text),
@@ -196,7 +197,6 @@ namespace MuseumTool
                 capacitatDiposit = ParseInt(textBoxCapacitatDiposit.Text),
                 formaIngres = comboBoxFormaIngres.SelectedItem?.ToString() ?? "", // Handle null for ComboBox
                 fontIngres = textBoxFontIngres.Text,
-                numInventari = ParseInt(textBoxNumInventari.Text),
                 multimedia = GetListBoxItems(listBoxMultimedia),
                 descripcio = textBoxDescripcio.Text
             };

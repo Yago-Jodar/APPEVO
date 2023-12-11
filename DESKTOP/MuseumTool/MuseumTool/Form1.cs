@@ -12,17 +12,9 @@ namespace MuseumTool
 {
     public partial class museumToolGeneral : Form
     {
-        public Boolean initializationMode { get; set; }
-        public int numInventariSel { get; set; }
-
         public museumToolGeneral()
         {
             InitializeComponent();
-        }
-
-        private void museumToolGeneral_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void TransportPersonesMercaderies_Click(object sender, EventArgs e)

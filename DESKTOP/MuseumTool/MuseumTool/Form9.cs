@@ -1,15 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MuseumTool
@@ -18,7 +10,7 @@ namespace MuseumTool
     {
         public int IdSeleccionado { get; private set; }
         public string ambitName {  get; private set; }
-
+        public JArray ambitGeneral { get; set; }
         public visualizadorObjetos()
         {
             InitializeComponent();
@@ -36,6 +28,7 @@ namespace MuseumTool
                     JArray ambitSeleccionat = JArray.Parse(File.ReadAllText(ambitDir));
 
                     dataGridViewObjectes.DataSource = ambitSeleccionat;
+                    ambitGeneral = ambitSeleccionat;
                     break;
 
                 case "Bombers":
@@ -68,7 +61,7 @@ namespace MuseumTool
                     enableEditMode.numInventariSel = IdSeleccionado;
 
                     enableEditMode.Show();
-
+                    this.Close();
                     break;
 
                 case "Bombers":
@@ -79,7 +72,10 @@ namespace MuseumTool
                     MessageBox.Show($"Selecciona un àmbit vàlid per a llistar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
             }
+        }
 
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
 
         }
     }
