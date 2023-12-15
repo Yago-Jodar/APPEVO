@@ -22,19 +22,14 @@ namespace MuseumTool
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // Crear una lista para almacenar objetos InfoCarrierTransportPersonesMercaderies
             List<Colleccions> colleccioList;
 
-            // Verificar si el archivo JSON ya existe
             if (File.Exists(Colleccions.colleccionsDir))
             {
-                // Leer el contenido del archivo JSON existente
                 string jsonColleccionsExists = File.ReadAllText(Colleccions.colleccionsDir);
 
-                // Deserializar el JSON existente a la lista de InfoCarrierTransportPersonesMercaderies
                 colleccioList = JsonConvert.DeserializeObject<List<Colleccions>>(jsonColleccionsExists);
 
-                // Asigna las colecciones al ComboBox
                 foreach (var collection in colleccioList)
                 {
                     comboBoxColleccio.Items.Add(collection.nombre);
@@ -43,13 +38,10 @@ namespace MuseumTool
 
             if (initializationMode && numInventariSel != 0)
             {
-                // Cargar el JSON
                 string existingJson = File.ReadAllText(@"..\..\JSON\transportPersonesMercaderies.json");
 
-                // Deserializar a un array de objetos JSON
                 JArray jsonArray = JArray.Parse(existingJson);
 
-                // Buscar el objeto correspondiente al número de inventario seleccionado
                 JObject selectedObject = jsonArray.FirstOrDefault(obj => (int)obj["numInventari"] == numInventariSel) as JObject;
 
                 if (selectedObject != null)

@@ -159,6 +159,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="JSON\bombers.json" />
+    <None Include="JSON\revolucioUtilitari.json" />
     <None Include="JSON\microcotxesElectricsIPrototips.json" />
     <None Include="JSON\inicisAviacio.json" />
     <None Include="JSON\motocicletesCatalanes.json" />

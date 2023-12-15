@@ -112,6 +112,46 @@ namespace MuseumTool
                     this.Close();
                     break;
 
+                case "Motocicletes Catalanes":
+                    motocicletesCatalanes enableEditModeM = new motocicletesCatalanes();
+
+                    enableEditModeM.initializationMode = true;
+                    enableEditModeM.numInventariSel = IdSeleccionado;
+
+                    enableEditModeM.Show();
+                    this.Close();
+                    break;
+
+                case "Microcotxes i prototips elèctrics":
+                    microcotxesElectricsProtoipsUnics enableEditModeMPU = new microcotxesElectricsProtoipsUnics();
+
+                    enableEditModeMPU.initializationMode = true;
+                    enableEditModeMPU.numInventariSel = IdSeleccionado;
+
+                    enableEditModeMPU.Show();
+                    this.Close();
+                    break;
+
+                case "La revolució de l'utilitari":
+                    Form7 enableEditModeRU = new Form7();
+
+                    enableEditModeRU.initializationMode = true;
+                    enableEditModeRU.numInventariSel = IdSeleccionado;
+
+                    enableEditModeRU.Show();
+                    this.Close();
+                    break;
+
+                case "Inicis de l'aviació":
+                    inicisAviacio enableEditModeIA = new inicisAviacio();
+
+                    enableEditModeIA.initializationMode = true;
+                    enableEditModeIA.numInventariSel = IdSeleccionado;
+
+                    enableEditModeIA.Show();
+                    this.Close();
+                    break;
+
                 default:
                     MessageBox.Show($"Selecciona un àmbit vàlid per a llistar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
