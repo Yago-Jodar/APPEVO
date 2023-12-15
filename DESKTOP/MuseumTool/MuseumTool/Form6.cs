@@ -57,7 +57,7 @@ namespace MuseumTool
                     textBoxAlcada.Text = (string)selectedObject["alcada"];
                     textBoxEnvergadura.Text = (string)selectedObject["envergadura"];
                     textBoxPes.Text = (string)selectedObject["pes"];
-                    textBoxPesEnlairament = = (string)selectedObject["pesMax"];
+                    textBoxPesEnlairament = (string)selectedObject["pesMax"];
                     textBoxCicle.Text = (string)selectedObject["cicle"];
                     textBoxCilindrada.Text = (string)selectedObject["cilindrada"];
                     textBoxPotencia.Text = (string)selectedObject["potenciaVal"];
