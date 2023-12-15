@@ -49,13 +49,10 @@ namespace MuseumTool
         }
         private void dataGridViewObjectes_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            // Verifica si se hizo clic en una celda válida
             if (e.RowIndex >= 0 && e.RowIndex < dataGridViewObjectes.Rows.Count)
             {
-                // Obtiene el valor de la celda "numInventari" de la fila seleccionada
                 int idSeleccionado = Convert.ToInt32(dataGridViewObjectes.Rows[e.RowIndex].Cells["numInventari"].Value);
                 IdSeleccionado = idSeleccionado;
-
                 selectedRowIndex = e.RowIndex;
             }
         }

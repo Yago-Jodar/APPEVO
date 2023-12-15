@@ -41,7 +41,8 @@ namespace MuseumTool
         public int velocitatcreuer { get; set; }
         public int capacitatDiposit { get; set; }
         public float autonomia { get; set; }
-        public float autonomiaTemps { get; set; }        
+        public float autonomiaTemps { get; set; }
+        public float quilometresFets { get; set; }
         public string formaIngres { get; set; }
         public string fontIngres { get; set; }
         public JArray multimedia { get; set; }

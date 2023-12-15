@@ -3,13 +3,8 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MuseumTool
@@ -26,19 +21,14 @@ namespace MuseumTool
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // Crear una lista para almacenar objetos col·leccions
             List<Colleccions> colleccioList;
 
-            // Verificar si el archivo JSON ya existe
             if (File.Exists(Colleccions.colleccionsDir))
             {
-                // Leer el contenido del archivo JSON existente
                 string jsonColleccionsExists = File.ReadAllText(Colleccions.colleccionsDir);
 
-                // Deserializar el JSON existente a la lista de col·leccions
                 colleccioList = JsonConvert.DeserializeObject<List<Colleccions>>(jsonColleccionsExists);
 
-                // Asigna las colecciones al ComboBox
                 foreach (var collection in colleccioList)
                 {
                     comboBoxColleccio.Items.Add(collection.nombre);
@@ -47,18 +37,14 @@ namespace MuseumTool
 
             if (initializationMode && numInventariSel != 0)
             {
-                // Cargar el JSON
                 string existingJson = File.ReadAllText(@"..\..\JSON\bombers.json");
 
-                // Deserializar a un array de objetos JSON
                 JArray jsonArray = JArray.Parse(existingJson);
 
-                // Buscar el objeto correspondiente al número de inventario seleccionado
                 JObject selectedObject = jsonArray.FirstOrDefault(obj => (int)obj["numInventari"] == numInventariSel) as JObject;
 
                 if (selectedObject != null)
                 {
-                    // Rellenar los campos con los datos del objeto encontrado
                     textBoxNumInventari.Text = (string)selectedObject["numInventari"];
                     comboBoxColleccio.SelectedItem = (string)selectedObject["collceccio"];
                     textBoxNom.Text = (string)selectedObject["name"];
@@ -101,7 +87,6 @@ namespace MuseumTool
                     string filename = Path.GetFileName(filePath);
                     string destinationPath = Path.Combine(@"..\..\multimedia", filename);
 
-                    //Handle already existent file error
                     try
                     {
                         File.Copy(filePath, destinationPath);
@@ -110,7 +95,6 @@ namespace MuseumTool
                     {
                         MessageBox.Show($"L'imatge ja existeix: {filename}", "Atenció", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    // Verify if the file already exists in listBoxMultimedia
                     if (!listBoxMultimedia.Items.Contains(destinationPath))
                     {
                         listBoxMultimedia.Items.Add(destinationPath);
@@ -121,19 +105,16 @@ namespace MuseumTool
 
         private void eliminar_Click(object sender, EventArgs e)
         {
-            // Create a copy of the selected items to avoid modifying the collection during iteration
             List<string> selectedItems = new List<string>();
             foreach (var selectedItem in listBoxMultimedia.SelectedItems)
             {
                 selectedItems.Add(selectedItem.ToString());
             }
 
-            // Remove the selected items from the listBoxMultimedia
             foreach (var selectedItem in selectedItems)
             {
                 listBoxMultimedia.Items.Remove(selectedItem);
 
-                // Eliminar el archivo correspondiente
                 File.Delete(selectedItem);
             }
         }
@@ -143,16 +124,12 @@ namespace MuseumTool
             // Ruta del archivo JSON
             string jsonFilePath = @"..\..\JSON\bombers.json";
 
-            // Crear una lista para almacenar objetos InfoCarrierBombers
             List<InfoCarrierBombers> infoList;
 
-            // Leer el contenido del archivo JSON existente
             JArray existingJson = JArray.Parse(File.ReadAllText(jsonFilePath));
 
-            // Deserializar el JSON existente a la lista de InfoCarrierBombers
             infoList = existingJson.ToObject<List<InfoCarrierBombers>>();
 
-            // Buscar el objeto correspondiente al número de inventario seleccionado
             JObject currentNumInventari = existingJson.FirstOrDefault(obj => (int)obj["numInventari"] == ParseInt(textBoxNumInventari.Text)) as JObject;
 
             if (textBoxNumInventari.Text == "" || ParseInt(textBoxNumInventari.Text) == 0)
@@ -184,7 +161,6 @@ namespace MuseumTool
                 }
             }
 
-            // Crear una instancia de InfoCarrier y poblar sus propiedades
             InfoCarrierBombers info = new InfoCarrierBombers
             {
                 numInventari = ParseInt(textBoxNumInventari.Text),
@@ -211,20 +187,16 @@ namespace MuseumTool
             DialogResult result = MessageBox.Show($"Els camps que no posseeixin informació o en els quals aquests valors siguin incorrectes, seràn assignats a un valor estàndar: ", "Atenció", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.No)
             {
-                // El usuario eligió no guardar la entrada, salir del método
                 return;
             }
 
-            // Serializar la lista completa a JSON
             JArray newJson = (JArray)JToken.FromObject(infoList);
 
-            // Escribir el JSON de vuelta al archivo
             File.WriteAllText(jsonFilePath, newJson.ToString());
 
             this.Close();
         }
 
-        // Helper method to parse integers with error handling
         private int ParseInt(string input)
         {
             int result;
@@ -234,13 +206,11 @@ namespace MuseumTool
             }
             else
             {
-                // Handle parsing error as needed
                 MessageBox.Show($"Invalid numeric input, will be set at '0': {input}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 0; // or throw an exception or handle differently
+                return 0;
             }
         }
 
-        // Helper method to parse floats with error handling
         private float ParseFloat(string input)
         {
             float result;
@@ -250,13 +220,11 @@ namespace MuseumTool
             }
             else
             {
-                // Handle parsing error as needed
                 MessageBox.Show($"Invalid numeric input, will be set at '0': {input}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 0.0f; // or throw an exception or handle differently
+                return 0.0f;
             }
         }
 
-        // Helper method to get selected items from a ListBox
         private JArray GetListBoxItems(ListBox listBox)
         {
             JArray itemsArray = new JArray();
@@ -267,7 +235,6 @@ namespace MuseumTool
             return itemsArray;
         }
 
-        //Helper method to add potencia to its specific power type
         private string TipoPotencia(string text, string comboBox)
         {
             string output = text + " " + comboBox;

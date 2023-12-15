@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DESKTOP",
+    "\\DESKTOP\\MuseumTool"
   ],
-  "SelectedNode": "\\MuseumTool.sln",
+  "SelectedNode": "\\DESKTOP\\MuseumTool\\MuseumTool.sln",
   "PreviewInSolutionExplorer": false
 }

@@ -28,33 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.crearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.elementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.colleccióToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.elementToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.colleccióToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.elementToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.colleccióToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxConfigBox = new System.Windows.Forms.GroupBox();
             this.colleccio = new System.Windows.Forms.Label();
-            this.comboBoxColeccio = new System.Windows.Forms.ComboBox();
-            this.ambit = new System.Windows.Forms.Label();
-            this.comboBoxAmbit = new System.Windows.Forms.ComboBox();
+            this.comboBoxColleccio = new System.Windows.Forms.ComboBox();
             this.groupBoxFitxaTecnica = new System.Windows.Forms.GroupBox();
             this.fontIngres = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBoxID = new System.Windows.Forms.TextBox();
-            this.ID = new System.Windows.Forms.Label();
+            this.textBoxFontIngres = new System.Windows.Forms.TextBox();
             this.comboBoxFormaIngres = new System.Windows.Forms.ComboBox();
             this.comboBoxPotencia = new System.Windows.Forms.ComboBox();
             this.numInventari = new System.Windows.Forms.Label();
             this.textBoxNumInventari = new System.Windows.Forms.TextBox();
             this.formaIngres = new System.Windows.Forms.Label();
             this.sostreMaxVol = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBoxSostreMax = new System.Windows.Forms.TextBox();
             this.kmFets = new System.Windows.Forms.Label();
             this.textBoxQuilometresFets = new System.Windows.Forms.TextBox();
             this.capacitatDiposit = new System.Windows.Forms.Label();
@@ -95,101 +81,24 @@
             this.nom = new System.Windows.Forms.Label();
             this.desar = new System.Windows.Forms.Button();
             this.groupBoxDescripcio = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxDescripcio = new System.Windows.Forms.TextBox();
             this.groupBoxMedia = new System.Windows.Forms.GroupBox();
             this.eliminar = new System.Windows.Forms.Button();
             this.afegir = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1.SuspendLayout();
+            this.listBoxMultimedia = new System.Windows.Forms.ListBox();
             this.groupBoxConfigBox.SuspendLayout();
             this.groupBoxFitxaTecnica.SuspendLayout();
             this.groupBoxDescripcio.SuspendLayout();
             this.groupBoxMedia.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearToolStripMenuItem,
-            this.modificarToolStripMenuItem,
-            this.eliminarToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(674, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // crearToolStripMenuItem
-            // 
-            this.crearToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.elementToolStripMenuItem,
-            this.colleccióToolStripMenuItem});
-            this.crearToolStripMenuItem.Name = "crearToolStripMenuItem";
-            this.crearToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.crearToolStripMenuItem.Text = "Crear";
-            // 
-            // elementToolStripMenuItem
-            // 
-            this.elementToolStripMenuItem.Name = "elementToolStripMenuItem";
-            this.elementToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.elementToolStripMenuItem.Text = "Element";
-            // 
-            // colleccióToolStripMenuItem
-            // 
-            this.colleccióToolStripMenuItem.Name = "colleccióToolStripMenuItem";
-            this.colleccióToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.colleccióToolStripMenuItem.Text = "Col·lecció";
-            // 
-            // modificarToolStripMenuItem
-            // 
-            this.modificarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.elementToolStripMenuItem1,
-            this.colleccióToolStripMenuItem1});
-            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.modificarToolStripMenuItem.Text = "Modificar";
-            // 
-            // elementToolStripMenuItem1
-            // 
-            this.elementToolStripMenuItem1.Name = "elementToolStripMenuItem1";
-            this.elementToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
-            this.elementToolStripMenuItem1.Text = "Element";
-            // 
-            // colleccióToolStripMenuItem1
-            // 
-            this.colleccióToolStripMenuItem1.Name = "colleccióToolStripMenuItem1";
-            this.colleccióToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
-            this.colleccióToolStripMenuItem1.Text = "Col·lecció";
-            // 
-            // eliminarToolStripMenuItem
-            // 
-            this.eliminarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.elementToolStripMenuItem2,
-            this.colleccióToolStripMenuItem2});
-            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.eliminarToolStripMenuItem.Text = "Eliminar";
-            // 
-            // elementToolStripMenuItem2
-            // 
-            this.elementToolStripMenuItem2.Name = "elementToolStripMenuItem2";
-            this.elementToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
-            this.elementToolStripMenuItem2.Text = "Element";
-            // 
-            // colleccióToolStripMenuItem2
-            // 
-            this.colleccióToolStripMenuItem2.Name = "colleccióToolStripMenuItem2";
-            this.colleccióToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
-            this.colleccióToolStripMenuItem2.Text = "Col·lecció";
             // 
             // groupBoxConfigBox
             // 
             this.groupBoxConfigBox.Controls.Add(this.colleccio);
-            this.groupBoxConfigBox.Controls.Add(this.comboBoxColeccio);
-            this.groupBoxConfigBox.Controls.Add(this.ambit);
-            this.groupBoxConfigBox.Controls.Add(this.comboBoxAmbit);
-            this.groupBoxConfigBox.Location = new System.Drawing.Point(12, 27);
+            this.groupBoxConfigBox.Controls.Add(this.comboBoxColleccio);
+            this.groupBoxConfigBox.Controls.Add(this.textBoxNumInventari);
+            this.groupBoxConfigBox.Controls.Add(this.numInventari);
+            this.groupBoxConfigBox.Location = new System.Drawing.Point(12, 12);
             this.groupBoxConfigBox.Name = "groupBoxConfigBox";
             this.groupBoxConfigBox.Size = new System.Drawing.Size(366, 78);
             this.groupBoxConfigBox.TabIndex = 6;
@@ -205,44 +114,23 @@
             this.colleccio.TabIndex = 3;
             this.colleccio.Text = "Col·lecció";
             // 
-            // comboBoxColeccio
+            // comboBoxColleccio
             // 
-            this.comboBoxColeccio.FormattingEnabled = true;
-            this.comboBoxColeccio.Location = new System.Drawing.Point(65, 49);
-            this.comboBoxColeccio.Name = "comboBoxColeccio";
-            this.comboBoxColeccio.Size = new System.Drawing.Size(295, 21);
-            this.comboBoxColeccio.TabIndex = 2;
-            // 
-            // ambit
-            // 
-            this.ambit.AutoSize = true;
-            this.ambit.Location = new System.Drawing.Point(6, 22);
-            this.ambit.Name = "ambit";
-            this.ambit.Size = new System.Drawing.Size(33, 13);
-            this.ambit.TabIndex = 1;
-            this.ambit.Text = "Àmbit";
-            // 
-            // comboBoxAmbit
-            // 
-            this.comboBoxAmbit.FormattingEnabled = true;
-            this.comboBoxAmbit.Location = new System.Drawing.Point(65, 19);
-            this.comboBoxAmbit.Name = "comboBoxAmbit";
-            this.comboBoxAmbit.Size = new System.Drawing.Size(295, 21);
-            this.comboBoxAmbit.TabIndex = 0;
+            this.comboBoxColleccio.FormattingEnabled = true;
+            this.comboBoxColleccio.Location = new System.Drawing.Point(107, 49);
+            this.comboBoxColleccio.Name = "comboBoxColleccio";
+            this.comboBoxColleccio.Size = new System.Drawing.Size(253, 21);
+            this.comboBoxColleccio.TabIndex = 2;
             // 
             // groupBoxFitxaTecnica
             // 
             this.groupBoxFitxaTecnica.Controls.Add(this.fontIngres);
-            this.groupBoxFitxaTecnica.Controls.Add(this.textBox2);
-            this.groupBoxFitxaTecnica.Controls.Add(this.textBoxID);
-            this.groupBoxFitxaTecnica.Controls.Add(this.ID);
+            this.groupBoxFitxaTecnica.Controls.Add(this.textBoxFontIngres);
             this.groupBoxFitxaTecnica.Controls.Add(this.comboBoxFormaIngres);
             this.groupBoxFitxaTecnica.Controls.Add(this.comboBoxPotencia);
-            this.groupBoxFitxaTecnica.Controls.Add(this.numInventari);
-            this.groupBoxFitxaTecnica.Controls.Add(this.textBoxNumInventari);
             this.groupBoxFitxaTecnica.Controls.Add(this.formaIngres);
             this.groupBoxFitxaTecnica.Controls.Add(this.sostreMaxVol);
-            this.groupBoxFitxaTecnica.Controls.Add(this.textBox19);
+            this.groupBoxFitxaTecnica.Controls.Add(this.textBoxSostreMax);
             this.groupBoxFitxaTecnica.Controls.Add(this.kmFets);
             this.groupBoxFitxaTecnica.Controls.Add(this.textBoxQuilometresFets);
             this.groupBoxFitxaTecnica.Controls.Add(this.capacitatDiposit);
@@ -281,9 +169,9 @@
             this.groupBoxFitxaTecnica.Controls.Add(this.textBoxNom);
             this.groupBoxFitxaTecnica.Controls.Add(this.any);
             this.groupBoxFitxaTecnica.Controls.Add(this.nom);
-            this.groupBoxFitxaTecnica.Location = new System.Drawing.Point(12, 111);
+            this.groupBoxFitxaTecnica.Location = new System.Drawing.Point(12, 96);
             this.groupBoxFitxaTecnica.Name = "groupBoxFitxaTecnica";
-            this.groupBoxFitxaTecnica.Size = new System.Drawing.Size(366, 645);
+            this.groupBoxFitxaTecnica.Size = new System.Drawing.Size(366, 597);
             this.groupBoxFitxaTecnica.TabIndex = 11;
             this.groupBoxFitxaTecnica.TabStop = false;
             this.groupBoxFitxaTecnica.Text = "Fitxa Tècnica";
@@ -291,34 +179,18 @@
             // fontIngres
             // 
             this.fontIngres.AutoSize = true;
-            this.fontIngres.Location = new System.Drawing.Point(6, 567);
+            this.fontIngres.Location = new System.Drawing.Point(6, 542);
             this.fontIngres.Name = "fontIngres";
             this.fontIngres.Size = new System.Drawing.Size(67, 13);
             this.fontIngres.TabIndex = 53;
             this.fontIngres.Text = "Font d\'ingrés";
             // 
-            // textBox2
+            // textBoxFontIngres
             // 
-            this.textBox2.Location = new System.Drawing.Point(140, 564);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(220, 20);
-            this.textBox2.TabIndex = 52;
-            // 
-            // textBoxID
-            // 
-            this.textBoxID.Location = new System.Drawing.Point(140, 19);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(220, 20);
-            this.textBoxID.TabIndex = 51;
-            // 
-            // ID
-            // 
-            this.ID.AutoSize = true;
-            this.ID.Location = new System.Drawing.Point(6, 22);
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(18, 13);
-            this.ID.TabIndex = 50;
-            this.ID.Text = "ID";
+            this.textBoxFontIngres.Location = new System.Drawing.Point(140, 539);
+            this.textBoxFontIngres.Name = "textBoxFontIngres";
+            this.textBoxFontIngres.Size = new System.Drawing.Size(220, 20);
+            this.textBoxFontIngres.TabIndex = 52;
             // 
             // comboBoxFormaIngres
             // 
@@ -328,7 +200,7 @@
             "Compra",
             "Dipòsit",
             "Cessió"});
-            this.comboBoxFormaIngres.Location = new System.Drawing.Point(140, 590);
+            this.comboBoxFormaIngres.Location = new System.Drawing.Point(140, 565);
             this.comboBoxFormaIngres.Name = "comboBoxFormaIngres";
             this.comboBoxFormaIngres.Size = new System.Drawing.Size(220, 21);
             this.comboBoxFormaIngres.TabIndex = 49;
@@ -340,7 +212,7 @@
             "cv",
             "HP",
             "KW"});
-            this.comboBoxPotencia.Location = new System.Drawing.Point(308, 356);
+            this.comboBoxPotencia.Location = new System.Drawing.Point(308, 331);
             this.comboBoxPotencia.Name = "comboBoxPotencia";
             this.comboBoxPotencia.Size = new System.Drawing.Size(52, 21);
             this.comboBoxPotencia.TabIndex = 48;
@@ -348,7 +220,7 @@
             // numInventari
             // 
             this.numInventari.AutoSize = true;
-            this.numInventari.Location = new System.Drawing.Point(6, 619);
+            this.numInventari.Location = new System.Drawing.Point(6, 26);
             this.numInventari.Name = "numInventari";
             this.numInventari.Size = new System.Drawing.Size(95, 13);
             this.numInventari.TabIndex = 47;
@@ -356,15 +228,15 @@
             // 
             // textBoxNumInventari
             // 
-            this.textBoxNumInventari.Location = new System.Drawing.Point(140, 616);
+            this.textBoxNumInventari.Location = new System.Drawing.Point(107, 23);
             this.textBoxNumInventari.Name = "textBoxNumInventari";
-            this.textBoxNumInventari.Size = new System.Drawing.Size(220, 20);
+            this.textBoxNumInventari.Size = new System.Drawing.Size(253, 20);
             this.textBoxNumInventari.TabIndex = 46;
             // 
             // formaIngres
             // 
             this.formaIngres.AutoSize = true;
-            this.formaIngres.Location = new System.Drawing.Point(6, 593);
+            this.formaIngres.Location = new System.Drawing.Point(6, 568);
             this.formaIngres.Name = "formaIngres";
             this.formaIngres.Size = new System.Drawing.Size(72, 13);
             this.formaIngres.TabIndex = 45;
@@ -373,23 +245,23 @@
             // sostreMaxVol
             // 
             this.sostreMaxVol.AutoSize = true;
-            this.sostreMaxVol.Location = new System.Drawing.Point(6, 541);
+            this.sostreMaxVol.Location = new System.Drawing.Point(6, 516);
             this.sostreMaxVol.Name = "sostreMaxVol";
             this.sostreMaxVol.Size = new System.Drawing.Size(101, 13);
             this.sostreMaxVol.TabIndex = 43;
             this.sostreMaxVol.Text = "Sostre màxim de vol";
             // 
-            // textBox19
+            // textBoxSostreMax
             // 
-            this.textBox19.Location = new System.Drawing.Point(140, 538);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(220, 20);
-            this.textBox19.TabIndex = 42;
+            this.textBoxSostreMax.Location = new System.Drawing.Point(140, 513);
+            this.textBoxSostreMax.Name = "textBoxSostreMax";
+            this.textBoxSostreMax.Size = new System.Drawing.Size(220, 20);
+            this.textBoxSostreMax.TabIndex = 42;
             // 
             // kmFets
             // 
             this.kmFets.AutoSize = true;
-            this.kmFets.Location = new System.Drawing.Point(6, 515);
+            this.kmFets.Location = new System.Drawing.Point(6, 490);
             this.kmFets.Name = "kmFets";
             this.kmFets.Size = new System.Drawing.Size(82, 13);
             this.kmFets.TabIndex = 41;
@@ -397,7 +269,7 @@
             // 
             // textBoxQuilometresFets
             // 
-            this.textBoxQuilometresFets.Location = new System.Drawing.Point(140, 512);
+            this.textBoxQuilometresFets.Location = new System.Drawing.Point(140, 487);
             this.textBoxQuilometresFets.Name = "textBoxQuilometresFets";
             this.textBoxQuilometresFets.Size = new System.Drawing.Size(220, 20);
             this.textBoxQuilometresFets.TabIndex = 40;
@@ -405,7 +277,7 @@
             // capacitatDiposit
             // 
             this.capacitatDiposit.AutoSize = true;
-            this.capacitatDiposit.Location = new System.Drawing.Point(6, 489);
+            this.capacitatDiposit.Location = new System.Drawing.Point(6, 464);
             this.capacitatDiposit.Name = "capacitatDiposit";
             this.capacitatDiposit.Size = new System.Drawing.Size(85, 13);
             this.capacitatDiposit.TabIndex = 39;
@@ -413,7 +285,7 @@
             // 
             // textBoxCapacitatDiposit
             // 
-            this.textBoxCapacitatDiposit.Location = new System.Drawing.Point(140, 486);
+            this.textBoxCapacitatDiposit.Location = new System.Drawing.Point(140, 461);
             this.textBoxCapacitatDiposit.Name = "textBoxCapacitatDiposit";
             this.textBoxCapacitatDiposit.Size = new System.Drawing.Size(220, 20);
             this.textBoxCapacitatDiposit.TabIndex = 38;
@@ -421,7 +293,7 @@
             // autonomiaTemps
             // 
             this.autonomiaTemps.AutoSize = true;
-            this.autonomiaTemps.Location = new System.Drawing.Point(6, 463);
+            this.autonomiaTemps.Location = new System.Drawing.Point(6, 438);
             this.autonomiaTemps.Name = "autonomiaTemps";
             this.autonomiaTemps.Size = new System.Drawing.Size(103, 13);
             this.autonomiaTemps.TabIndex = 37;
@@ -429,7 +301,7 @@
             // 
             // textBoxAutonomiaTemps
             // 
-            this.textBoxAutonomiaTemps.Location = new System.Drawing.Point(140, 460);
+            this.textBoxAutonomiaTemps.Location = new System.Drawing.Point(140, 435);
             this.textBoxAutonomiaTemps.Name = "textBoxAutonomiaTemps";
             this.textBoxAutonomiaTemps.Size = new System.Drawing.Size(220, 20);
             this.textBoxAutonomiaTemps.TabIndex = 36;
@@ -437,7 +309,7 @@
             // autonomia
             // 
             this.autonomia.AutoSize = true;
-            this.autonomia.Location = new System.Drawing.Point(6, 437);
+            this.autonomia.Location = new System.Drawing.Point(6, 412);
             this.autonomia.Name = "autonomia";
             this.autonomia.Size = new System.Drawing.Size(57, 13);
             this.autonomia.TabIndex = 35;
@@ -445,7 +317,7 @@
             // 
             // textBoxAutonomia
             // 
-            this.textBoxAutonomia.Location = new System.Drawing.Point(140, 434);
+            this.textBoxAutonomia.Location = new System.Drawing.Point(140, 409);
             this.textBoxAutonomia.Name = "textBoxAutonomia";
             this.textBoxAutonomia.Size = new System.Drawing.Size(220, 20);
             this.textBoxAutonomia.TabIndex = 34;
@@ -453,7 +325,7 @@
             // velCreuer
             // 
             this.velCreuer.AutoSize = true;
-            this.velCreuer.Location = new System.Drawing.Point(6, 411);
+            this.velCreuer.Location = new System.Drawing.Point(6, 386);
             this.velCreuer.Name = "velCreuer";
             this.velCreuer.Size = new System.Drawing.Size(81, 13);
             this.velCreuer.TabIndex = 33;
@@ -461,7 +333,7 @@
             // 
             // textBoxVelCreuer
             // 
-            this.textBoxVelCreuer.Location = new System.Drawing.Point(140, 408);
+            this.textBoxVelCreuer.Location = new System.Drawing.Point(140, 383);
             this.textBoxVelCreuer.Name = "textBoxVelCreuer";
             this.textBoxVelCreuer.Size = new System.Drawing.Size(220, 20);
             this.textBoxVelCreuer.TabIndex = 32;
@@ -469,7 +341,7 @@
             // velMax
             // 
             this.velMax.AutoSize = true;
-            this.velMax.Location = new System.Drawing.Point(6, 385);
+            this.velMax.Location = new System.Drawing.Point(6, 360);
             this.velMax.Name = "velMax";
             this.velMax.Size = new System.Drawing.Size(86, 13);
             this.velMax.TabIndex = 31;
@@ -477,7 +349,7 @@
             // 
             // textBoxVelMax
             // 
-            this.textBoxVelMax.Location = new System.Drawing.Point(140, 382);
+            this.textBoxVelMax.Location = new System.Drawing.Point(140, 357);
             this.textBoxVelMax.Name = "textBoxVelMax";
             this.textBoxVelMax.Size = new System.Drawing.Size(220, 20);
             this.textBoxVelMax.TabIndex = 30;
@@ -485,7 +357,7 @@
             // potencia
             // 
             this.potencia.AutoSize = true;
-            this.potencia.Location = new System.Drawing.Point(6, 359);
+            this.potencia.Location = new System.Drawing.Point(6, 334);
             this.potencia.Name = "potencia";
             this.potencia.Size = new System.Drawing.Size(49, 13);
             this.potencia.TabIndex = 29;
@@ -493,7 +365,7 @@
             // 
             // textBoxPotencia
             // 
-            this.textBoxPotencia.Location = new System.Drawing.Point(140, 356);
+            this.textBoxPotencia.Location = new System.Drawing.Point(140, 331);
             this.textBoxPotencia.Name = "textBoxPotencia";
             this.textBoxPotencia.Size = new System.Drawing.Size(162, 20);
             this.textBoxPotencia.TabIndex = 28;
@@ -501,7 +373,7 @@
             // cilindrada
             // 
             this.cilindrada.AutoSize = true;
-            this.cilindrada.Location = new System.Drawing.Point(6, 333);
+            this.cilindrada.Location = new System.Drawing.Point(6, 308);
             this.cilindrada.Name = "cilindrada";
             this.cilindrada.Size = new System.Drawing.Size(53, 13);
             this.cilindrada.TabIndex = 27;
@@ -509,7 +381,7 @@
             // 
             // textBoxCilindrada
             // 
-            this.textBoxCilindrada.Location = new System.Drawing.Point(140, 330);
+            this.textBoxCilindrada.Location = new System.Drawing.Point(140, 305);
             this.textBoxCilindrada.Name = "textBoxCilindrada";
             this.textBoxCilindrada.Size = new System.Drawing.Size(220, 20);
             this.textBoxCilindrada.TabIndex = 26;
@@ -517,7 +389,7 @@
             // cicle
             // 
             this.cicle.AutoSize = true;
-            this.cicle.Location = new System.Drawing.Point(6, 307);
+            this.cicle.Location = new System.Drawing.Point(6, 282);
             this.cicle.Name = "cicle";
             this.cicle.Size = new System.Drawing.Size(30, 13);
             this.cicle.TabIndex = 25;
@@ -525,7 +397,7 @@
             // 
             // textBoxCicle
             // 
-            this.textBoxCicle.Location = new System.Drawing.Point(140, 304);
+            this.textBoxCicle.Location = new System.Drawing.Point(140, 279);
             this.textBoxCicle.Name = "textBoxCicle";
             this.textBoxCicle.Size = new System.Drawing.Size(220, 20);
             this.textBoxCicle.TabIndex = 24;
@@ -533,7 +405,7 @@
             // pesEnlairament
             // 
             this.pesEnlairament.AutoSize = true;
-            this.pesEnlairament.Location = new System.Drawing.Point(6, 281);
+            this.pesEnlairament.Location = new System.Drawing.Point(6, 256);
             this.pesEnlairament.Name = "pesEnlairament";
             this.pesEnlairament.Size = new System.Drawing.Size(115, 13);
             this.pesEnlairament.TabIndex = 23;
@@ -541,7 +413,7 @@
             // 
             // textBoxPesEnlairament
             // 
-            this.textBoxPesEnlairament.Location = new System.Drawing.Point(140, 278);
+            this.textBoxPesEnlairament.Location = new System.Drawing.Point(140, 253);
             this.textBoxPesEnlairament.Name = "textBoxPesEnlairament";
             this.textBoxPesEnlairament.Size = new System.Drawing.Size(220, 20);
             this.textBoxPesEnlairament.TabIndex = 22;
@@ -549,7 +421,7 @@
             // pes
             // 
             this.pes.AutoSize = true;
-            this.pes.Location = new System.Drawing.Point(6, 255);
+            this.pes.Location = new System.Drawing.Point(6, 230);
             this.pes.Name = "pes";
             this.pes.Size = new System.Drawing.Size(25, 13);
             this.pes.TabIndex = 21;
@@ -557,7 +429,7 @@
             // 
             // textBoxPes
             // 
-            this.textBoxPes.Location = new System.Drawing.Point(140, 252);
+            this.textBoxPes.Location = new System.Drawing.Point(140, 227);
             this.textBoxPes.Name = "textBoxPes";
             this.textBoxPes.Size = new System.Drawing.Size(220, 20);
             this.textBoxPes.TabIndex = 20;
@@ -565,7 +437,7 @@
             // envergadura
             // 
             this.envergadura.AutoSize = true;
-            this.envergadura.Location = new System.Drawing.Point(6, 229);
+            this.envergadura.Location = new System.Drawing.Point(6, 204);
             this.envergadura.Name = "envergadura";
             this.envergadura.Size = new System.Drawing.Size(68, 13);
             this.envergadura.TabIndex = 19;
@@ -573,7 +445,7 @@
             // 
             // textBoxEnvergadura
             // 
-            this.textBoxEnvergadura.Location = new System.Drawing.Point(140, 226);
+            this.textBoxEnvergadura.Location = new System.Drawing.Point(140, 201);
             this.textBoxEnvergadura.Name = "textBoxEnvergadura";
             this.textBoxEnvergadura.Size = new System.Drawing.Size(220, 20);
             this.textBoxEnvergadura.TabIndex = 18;
@@ -581,7 +453,7 @@
             // longitud
             // 
             this.longitud.AutoSize = true;
-            this.longitud.Location = new System.Drawing.Point(6, 177);
+            this.longitud.Location = new System.Drawing.Point(6, 152);
             this.longitud.Name = "longitud";
             this.longitud.Size = new System.Drawing.Size(48, 13);
             this.longitud.TabIndex = 17;
@@ -589,7 +461,7 @@
             // 
             // textBoxLongitud
             // 
-            this.textBoxLongitud.Location = new System.Drawing.Point(140, 174);
+            this.textBoxLongitud.Location = new System.Drawing.Point(140, 149);
             this.textBoxLongitud.Name = "textBoxLongitud";
             this.textBoxLongitud.Size = new System.Drawing.Size(220, 20);
             this.textBoxLongitud.TabIndex = 16;
@@ -597,7 +469,7 @@
             // alcada
             // 
             this.alcada.AutoSize = true;
-            this.alcada.Location = new System.Drawing.Point(6, 203);
+            this.alcada.Location = new System.Drawing.Point(6, 178);
             this.alcada.Name = "alcada";
             this.alcada.Size = new System.Drawing.Size(40, 13);
             this.alcada.TabIndex = 15;
@@ -605,7 +477,7 @@
             // 
             // textBoxAlcada
             // 
-            this.textBoxAlcada.Location = new System.Drawing.Point(140, 200);
+            this.textBoxAlcada.Location = new System.Drawing.Point(140, 175);
             this.textBoxAlcada.Name = "textBoxAlcada";
             this.textBoxAlcada.Size = new System.Drawing.Size(220, 20);
             this.textBoxAlcada.TabIndex = 14;
@@ -613,7 +485,7 @@
             // fontEnergia
             // 
             this.fontEnergia.AutoSize = true;
-            this.fontEnergia.Location = new System.Drawing.Point(6, 151);
+            this.fontEnergia.Location = new System.Drawing.Point(6, 126);
             this.fontEnergia.Name = "fontEnergia";
             this.fontEnergia.Size = new System.Drawing.Size(124, 13);
             this.fontEnergia.TabIndex = 13;
@@ -621,7 +493,7 @@
             // 
             // textBoxFontEnergia
             // 
-            this.textBoxFontEnergia.Location = new System.Drawing.Point(140, 148);
+            this.textBoxFontEnergia.Location = new System.Drawing.Point(140, 123);
             this.textBoxFontEnergia.Name = "textBoxFontEnergia";
             this.textBoxFontEnergia.Size = new System.Drawing.Size(220, 20);
             this.textBoxFontEnergia.TabIndex = 12;
@@ -629,7 +501,7 @@
             // llocProcedencia
             // 
             this.llocProcedencia.AutoSize = true;
-            this.llocProcedencia.Location = new System.Drawing.Point(6, 125);
+            this.llocProcedencia.Location = new System.Drawing.Point(6, 100);
             this.llocProcedencia.Name = "llocProcedencia";
             this.llocProcedencia.Size = new System.Drawing.Size(104, 13);
             this.llocProcedencia.TabIndex = 11;
@@ -637,7 +509,7 @@
             // 
             // textBoxLlocProcedencia
             // 
-            this.textBoxLlocProcedencia.Location = new System.Drawing.Point(140, 122);
+            this.textBoxLlocProcedencia.Location = new System.Drawing.Point(140, 97);
             this.textBoxLlocProcedencia.Name = "textBoxLlocProcedencia";
             this.textBoxLlocProcedencia.Size = new System.Drawing.Size(220, 20);
             this.textBoxLlocProcedencia.TabIndex = 10;
@@ -645,7 +517,7 @@
             // llocFabricacio
             // 
             this.llocFabricacio.AutoSize = true;
-            this.llocFabricacio.Location = new System.Drawing.Point(6, 99);
+            this.llocFabricacio.Location = new System.Drawing.Point(6, 74);
             this.llocFabricacio.Name = "llocFabricacio";
             this.llocFabricacio.Size = new System.Drawing.Size(91, 13);
             this.llocFabricacio.TabIndex = 9;
@@ -653,21 +525,21 @@
             // 
             // textBoxLlocFabricacio
             // 
-            this.textBoxLlocFabricacio.Location = new System.Drawing.Point(140, 96);
+            this.textBoxLlocFabricacio.Location = new System.Drawing.Point(140, 71);
             this.textBoxLlocFabricacio.Name = "textBoxLlocFabricacio";
             this.textBoxLlocFabricacio.Size = new System.Drawing.Size(220, 20);
             this.textBoxLlocFabricacio.TabIndex = 8;
             // 
             // textBoxAny
             // 
-            this.textBoxAny.Location = new System.Drawing.Point(140, 70);
+            this.textBoxAny.Location = new System.Drawing.Point(140, 45);
             this.textBoxAny.Name = "textBoxAny";
             this.textBoxAny.Size = new System.Drawing.Size(220, 20);
             this.textBoxAny.TabIndex = 7;
             // 
             // textBoxNom
             // 
-            this.textBoxNom.Location = new System.Drawing.Point(140, 44);
+            this.textBoxNom.Location = new System.Drawing.Point(140, 19);
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(220, 20);
             this.textBoxNom.TabIndex = 6;
@@ -675,7 +547,7 @@
             // any
             // 
             this.any.AutoSize = true;
-            this.any.Location = new System.Drawing.Point(6, 73);
+            this.any.Location = new System.Drawing.Point(6, 48);
             this.any.Name = "any";
             this.any.Size = new System.Drawing.Size(25, 13);
             this.any.TabIndex = 5;
@@ -684,7 +556,7 @@
             // nom
             // 
             this.nom.AutoSize = true;
-            this.nom.Location = new System.Drawing.Point(6, 47);
+            this.nom.Location = new System.Drawing.Point(6, 22);
             this.nom.Name = "nom";
             this.nom.Size = new System.Drawing.Size(29, 13);
             this.nom.TabIndex = 4;
@@ -692,7 +564,7 @@
             // 
             // desar
             // 
-            this.desar.Location = new System.Drawing.Point(394, 710);
+            this.desar.Location = new System.Drawing.Point(388, 647);
             this.desar.Name = "desar";
             this.desar.Size = new System.Drawing.Size(268, 46);
             this.desar.TabIndex = 14;
@@ -701,37 +573,37 @@
             // 
             // groupBoxDescripcio
             // 
-            this.groupBoxDescripcio.Controls.Add(this.textBox1);
-            this.groupBoxDescripcio.Location = new System.Drawing.Point(394, 350);
+            this.groupBoxDescripcio.Controls.Add(this.textBoxDescripcio);
+            this.groupBoxDescripcio.Location = new System.Drawing.Point(394, 275);
             this.groupBoxDescripcio.Name = "groupBoxDescripcio";
-            this.groupBoxDescripcio.Size = new System.Drawing.Size(268, 354);
+            this.groupBoxDescripcio.Size = new System.Drawing.Size(268, 366);
             this.groupBoxDescripcio.TabIndex = 13;
             this.groupBoxDescripcio.TabStop = false;
             this.groupBoxDescripcio.Text = "Descripció";
             // 
-            // textBox1
+            // textBoxDescripcio
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 20);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(255, 325);
-            this.textBox1.TabIndex = 0;
+            this.textBoxDescripcio.Location = new System.Drawing.Point(7, 20);
+            this.textBoxDescripcio.Multiline = true;
+            this.textBoxDescripcio.Name = "textBoxDescripcio";
+            this.textBoxDescripcio.Size = new System.Drawing.Size(255, 334);
+            this.textBoxDescripcio.TabIndex = 0;
             // 
             // groupBoxMedia
             // 
+            this.groupBoxMedia.Controls.Add(this.listBoxMultimedia);
             this.groupBoxMedia.Controls.Add(this.eliminar);
             this.groupBoxMedia.Controls.Add(this.afegir);
-            this.groupBoxMedia.Controls.Add(this.dataGridView1);
-            this.groupBoxMedia.Location = new System.Drawing.Point(394, 27);
+            this.groupBoxMedia.Location = new System.Drawing.Point(394, 12);
             this.groupBoxMedia.Name = "groupBoxMedia";
-            this.groupBoxMedia.Size = new System.Drawing.Size(268, 317);
+            this.groupBoxMedia.Size = new System.Drawing.Size(268, 257);
             this.groupBoxMedia.TabIndex = 12;
             this.groupBoxMedia.TabStop = false;
             this.groupBoxMedia.Text = "Multimedia";
             // 
             // eliminar
             // 
-            this.eliminar.Location = new System.Drawing.Point(187, 289);
+            this.eliminar.Location = new System.Drawing.Point(187, 226);
             this.eliminar.Name = "eliminar";
             this.eliminar.Size = new System.Drawing.Size(75, 23);
             this.eliminar.TabIndex = 2;
@@ -740,39 +612,33 @@
             // 
             // afegir
             // 
-            this.afegir.Location = new System.Drawing.Point(106, 289);
+            this.afegir.Location = new System.Drawing.Point(106, 226);
             this.afegir.Name = "afegir";
             this.afegir.Size = new System.Drawing.Size(75, 23);
             this.afegir.TabIndex = 1;
             this.afegir.Text = "Afegir";
             this.afegir.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // listBoxMultimedia
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(256, 266);
-            this.dataGridView1.TabIndex = 0;
+            this.listBoxMultimedia.FormattingEnabled = true;
+            this.listBoxMultimedia.Location = new System.Drawing.Point(7, 19);
+            this.listBoxMultimedia.Name = "listBoxMultimedia";
+            this.listBoxMultimedia.Size = new System.Drawing.Size(255, 199);
+            this.listBoxMultimedia.TabIndex = 3;
             // 
             // inicisAviacio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 766);
+            this.ClientSize = new System.Drawing.Size(674, 703);
             this.Controls.Add(this.desar);
             this.Controls.Add(this.groupBoxDescripcio);
             this.Controls.Add(this.groupBoxMedia);
             this.Controls.Add(this.groupBoxFitxaTecnica);
             this.Controls.Add(this.groupBoxConfigBox);
-            this.Controls.Add(this.menuStrip1);
             this.Name = "inicisAviacio";
             this.Text = "Inicis de l\'aviació";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.groupBoxConfigBox.ResumeLayout(false);
             this.groupBoxConfigBox.PerformLayout();
             this.groupBoxFitxaTecnica.ResumeLayout(false);
@@ -780,41 +646,24 @@
             this.groupBoxDescripcio.ResumeLayout(false);
             this.groupBoxDescripcio.PerformLayout();
             this.groupBoxMedia.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem crearToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem elementToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem colleccióToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem elementToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem colleccióToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem elementToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem colleccióToolStripMenuItem2;
         private System.Windows.Forms.GroupBox groupBoxConfigBox;
         private System.Windows.Forms.Label colleccio;
-        private System.Windows.Forms.ComboBox comboBoxColeccio;
-        private System.Windows.Forms.Label ambit;
-        private System.Windows.Forms.ComboBox comboBoxAmbit;
+        private System.Windows.Forms.ComboBox comboBoxColleccio;
         private System.Windows.Forms.GroupBox groupBoxFitxaTecnica;
         private System.Windows.Forms.Label fontIngres;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBoxID;
-        private System.Windows.Forms.Label ID;
+        private System.Windows.Forms.TextBox textBoxFontIngres;
         private System.Windows.Forms.ComboBox comboBoxFormaIngres;
         private System.Windows.Forms.ComboBox comboBoxPotencia;
         private System.Windows.Forms.Label numInventari;
         private System.Windows.Forms.TextBox textBoxNumInventari;
         private System.Windows.Forms.Label formaIngres;
         private System.Windows.Forms.Label sostreMaxVol;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox textBoxSostreMax;
         private System.Windows.Forms.Label kmFets;
         private System.Windows.Forms.TextBox textBoxQuilometresFets;
         private System.Windows.Forms.Label capacitatDiposit;
@@ -855,10 +704,10 @@
         private System.Windows.Forms.Label nom;
         private System.Windows.Forms.Button desar;
         private System.Windows.Forms.GroupBox groupBoxDescripcio;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxDescripcio;
         private System.Windows.Forms.GroupBox groupBoxMedia;
         private System.Windows.Forms.Button eliminar;
         private System.Windows.Forms.Button afegir;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ListBox listBoxMultimedia;
     }
 }
