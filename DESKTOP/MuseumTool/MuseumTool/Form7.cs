@@ -1,81 +1,209 @@
 ﻿using MuseumTool.JSON;
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MuseumTool
 {
-    public partial class editorColleccions : Form
+    public partial class Form7 : Form
     {
-        public editorColleccions()
+        public Boolean initializationMode { get; set; }
+        public int numInventariSel { get; set; }
+
+        public Form7()
         {
             InitializeComponent();
         }
 
-        private void editorColleccions_Load(object sender, EventArgs e)
+
+        private void Form7_Load(object sender, EventArgs e)
         {
-            // Crear una lista para almacenar objetos Colleccions
-            List<Colleccions> colleccioList;
 
-            // Verificar si el archivo JSON ya existe
-            if (File.Exists(Colleccions.colleccionsDir))
+        }
+
+        private void afegir_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog file = new OpenFileDialog();
+            file.Filter = "Imatges o videos amb format (*.jpg, *.jpeg, *.png, *.tiff, *.mp4)|*.jpg;*.jpeg;*.png;*.tiff;*.mp4";
+            file.Multiselect = true;
+
+            DialogResult result = file.ShowDialog();
+            if (result == DialogResult.OK)
             {
-                // Leer el contenido del archivo JSON existente
-                string existingJson = File.ReadAllText(Colleccions.colleccionsDir);
-
-                // Deserializar el JSON existente a la lista de Colleccions
-                colleccioList = JsonConvert.DeserializeObject<List<Colleccions>>(existingJson);
-
-                // Asigna las colecciones al ComboBox
-                foreach (var collection in colleccioList)
+                foreach (string filePath in file.FileNames)
                 {
-                    listBoxColleccions.Items.Add(collection.nombre);
+                    string filename = Path.GetFileName(filePath);
+                    string destinationPath = Path.Combine(@"..\..\multimedia", filename);
+
+                    try
+                    {
+                        File.Copy(filePath, destinationPath);
+                    }
+                    catch
+                    {
+                        MessageBox.Show($"L'imatge ja existeix: {filename}", "Atenció", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    if (!listBoxMultimedia.Items.Contains(destinationPath))
+                    {
+                        listBoxMultimedia.Items.Add(destinationPath);
+                    }
                 }
             }
         }
 
-        private void buttonAfegir_Click(object sender, EventArgs e)
+        private void eliminar_Click(object sender, EventArgs e)
         {
-            string newColleccio = textBoxColleccio.Text;
-
-            // Verify if the file already exists in listBoxMultimedia
-            if (string.IsNullOrEmpty(newColleccio))
+            List<string> selectedItems = new List<string>();
+            foreach (var selectedItem in listBoxMultimedia.SelectedItems)
             {
-                textBoxColleccio.Focus();
+                selectedItems.Add(selectedItem.ToString());
             }
-            else if(!listBoxColleccions.Items.Contains(newColleccio))
-            { 
-                listBoxColleccions.Items.Add(newColleccio);
+
+            foreach (var selectedItem in selectedItems)
+            {
+                listBoxMultimedia.Items.Remove(selectedItem);
+
+                File.Delete(selectedItem);
             }
         }
 
-        private void buttonEliminar_Click(object sender, EventArgs e)
+        private void desar_Click(object sender, EventArgs e)
         {
-            // Elimina el ítem seleccionado en listBoxColleccions
-            if (listBoxColleccions.SelectedItem != null)
-            {
-                listBoxColleccions.Items.Remove(listBoxColleccions.SelectedItem);
-            }
-        }
+            string jsonFilePath = @"..\..\JSON\InfoCarrierRevolucioUtilitari.json";
 
-        private void buttonDesar_Click(object sender, EventArgs e)
-        {
-            // Crea una lista de objetos Colleccions a partir de los elementos de listBoxColleccions
-            List<Colleccions> colleccioList = new List<Colleccions>();
-            foreach (var item in listBoxColleccions.Items)
+            List<InfoCarrierRevolucioUtilitari> infoList;
+
+            if (!File.Exists(jsonFilePath))
             {
-                colleccioList.Add(new Colleccions { nombre = item.ToString() });
+                infoList = new List<InfoCarrierRevolucioUtilitari>();
             }
 
-            // Serializa la lista a formato JSON
-            string json = JsonConvert.SerializeObject(colleccioList, Formatting.Indented);
+            JArray existingJson = JArray.Parse(File.ReadAllText(jsonFilePath));
 
-            // Escribe el JSON al archivo
-            File.WriteAllText(Colleccions.colleccionsDir, json);
+            infoList = existingJson.ToObject<List<InfoCarrierRevolucioUtilitari>>();
+
+            JObject currentNumInventari = existingJson.FirstOrDefault(obj => (int)obj["numInventari"] == ParseInt(textBoxNumInventari.Text)) as JObject;
+
+            if (textBoxNumInventari.Text == "" || ParseInt(textBoxNumInventari.Text) == 0)
+            {
+                MessageBox.Show($"El número d'inventari es un camp obligatori", "Atenció", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (currentNumInventari == null)
+            {
+                int numInventariExists = 0;
+
+                if (numInventariExists == ParseInt(textBoxNumInventari.Text))
+                {
+                    DialogResult overwrite = MessageBox.Show("El valor sel·leccionat com a número d'inventari no es vàlid\nSi us plau, sel·lecciona un número d'invetari vàlid", "Atenció", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            else
+            {
+                if ((int)currentNumInventari["numInventari"] == ParseInt(textBoxNumInventari.Text))
+                {
+                    DialogResult overwrite = MessageBox.Show("El número d'inventari sel·leccionat, ja existeix, pertany al objecte amb el nom " + currentNumInventari["name"] + ", si continues, s'esborrarà l'objecte " + currentNumInventari["name"] + ", i en el seu lloc s'aplicaràn les noves dades a l'objecte amb número d'inventari " + currentNumInventari["numInventari"] + "\nDesitja continuar?", "Atenció", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (overwrite == DialogResult.Yes)
+                    {
+                        infoList.RemoveAt(existingJson.IndexOf(currentNumInventari));
+                    }
+                }
+            }
+
+            InfoCarrierRevolucioUtilitari info = new InfoCarrierRevolucioUtilitari
+            {
+                numInventari = ParseInt(textBoxNumInventari.Text),
+                collceccio = comboBoxColleccio.SelectedItem?.ToString() ?? "",
+                name = textBoxNom.Text,
+                any = ParseInt(textBoxAny.Text),
+                llocFabricacio = textBoxLlocFabricacio.Text,
+                procedencia = textBoxProcedencia.Text,
+                fontEnergia = textBoxFontEnergia.Text,
+                cicle = ParseInt(textBoxCicle.Text),
+                cilindrada = ParseInt(textBoxCilindrada.Text),
+                potencia = TipoPotencia(textBoxPotencia.Text, comboBoxPotencia.SelectedItem?.ToString() ?? ""),
+                potenciaVal = ParseFloat(textBoxPotencia.Text),
+                potenciaType = comboBoxPotencia.SelectedItem?.ToString() ?? "",
+                velocitatMaxima = ParseInt(textBoxVelMax.Text),
+                autonomia = ParseFloat(textBoxAutonomia.Text),
+                capacitatDiposit = ParseInt(textBoxCapacitatDiposit.Text),
+                formaIngres = comboBoxFormaIngres.SelectedItem?.ToString() ?? "",
+                fontIngres = textBoxFontIngres.Text,
+                multimedia = GetListBoxItems(listBoxMultimedia),
+                descripcio = textBoxDescripcio.Text
+            };
+
+            infoList.Add(info);
+
+            DialogResult result = MessageBox.Show($"Els camps que no posseeixin informació o en els quals aquests valors siguin incorrectes, seràn assignats a un valor estàndar: ", "Atenció", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
+            JArray newJson = (JArray)JToken.FromObject(infoList);
+
+            File.WriteAllText(jsonFilePath, newJson.ToString());
 
             this.Close();
         }
+
+        private int ParseInt(string input)
+        {
+            int result;
+            if (int.TryParse(input, out result))
+            {
+                return result;
+            }
+            else
+            {
+                MessageBox.Show($"Invalid numeric input, will be set at '0': {input}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+        }
+
+        private float ParseFloat(string input)
+        {
+            float result;
+            if (float.TryParse(input, out result))
+            {
+                return result;
+            }
+            else
+            {
+                MessageBox.Show($"Invalid numeric input, will be set at '0': {input}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0.0f;
+            }
+        }
+
+        private JArray GetListBoxItems(ListBox listBox)
+        {
+            JArray itemsArray = new JArray();
+            foreach (var item in listBox.Items)
+            {
+                itemsArray.Add(item.ToString());
+            }
+            return itemsArray;
+        }
+
+        private string TipoPotencia(string text, string comboBox)
+        {
+            string output = text + " " + comboBox;
+
+            return output;
+        }
     }
+
 }

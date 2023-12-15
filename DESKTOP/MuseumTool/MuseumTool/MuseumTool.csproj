@@ -67,8 +67,15 @@
     <Compile Include="Form9.Designer.cs">
       <DependentUpon>Form9.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form10.Designer.cs">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </Compile>
     <Compile Include="InfoCarrierInicisAviacio.cs" />
     <Compile Include="InfoCarrierMicrocotxesIPrototips.cs" />
+    <Compile Include="InfoCarrierRevolucioUtilitari.cs" />
     <Compile Include="InfoCarrierTransportPersonesMercaderies.cs" />
     <Compile Include="InfoCarrierBombers.cs" />
     <Compile Include="Form1.cs">
@@ -138,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form9.resx">
       <DependentUpon>Form9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form10.resx">
+      <DependentUpon>Form10.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
