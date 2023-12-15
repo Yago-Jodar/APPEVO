@@ -31,13 +31,13 @@
             this.groupBoxConfigBox = new System.Windows.Forms.GroupBox();
             this.colleccio = new System.Windows.Forms.Label();
             this.comboBoxColleccio = new System.Windows.Forms.ComboBox();
+            this.textBoxNumInventari = new System.Windows.Forms.TextBox();
+            this.numInventari = new System.Windows.Forms.Label();
             this.groupBoxFitxaTecnica = new System.Windows.Forms.GroupBox();
             this.fontIngres = new System.Windows.Forms.Label();
             this.textBoxFontIngres = new System.Windows.Forms.TextBox();
             this.comboBoxFormaIngres = new System.Windows.Forms.ComboBox();
             this.comboBoxPotencia = new System.Windows.Forms.ComboBox();
-            this.numInventari = new System.Windows.Forms.Label();
-            this.textBoxNumInventari = new System.Windows.Forms.TextBox();
             this.formaIngres = new System.Windows.Forms.Label();
             this.sostreMaxVol = new System.Windows.Forms.Label();
             this.textBoxSostreMax = new System.Windows.Forms.TextBox();
@@ -83,9 +83,9 @@
             this.groupBoxDescripcio = new System.Windows.Forms.GroupBox();
             this.textBoxDescripcio = new System.Windows.Forms.TextBox();
             this.groupBoxMedia = new System.Windows.Forms.GroupBox();
+            this.listBoxMultimedia = new System.Windows.Forms.ListBox();
             this.eliminar = new System.Windows.Forms.Button();
             this.afegir = new System.Windows.Forms.Button();
-            this.listBoxMultimedia = new System.Windows.Forms.ListBox();
             this.groupBoxConfigBox.SuspendLayout();
             this.groupBoxFitxaTecnica.SuspendLayout();
             this.groupBoxDescripcio.SuspendLayout();
@@ -121,6 +121,22 @@
             this.comboBoxColleccio.Name = "comboBoxColleccio";
             this.comboBoxColleccio.Size = new System.Drawing.Size(253, 21);
             this.comboBoxColleccio.TabIndex = 2;
+            // 
+            // textBoxNumInventari
+            // 
+            this.textBoxNumInventari.Location = new System.Drawing.Point(107, 23);
+            this.textBoxNumInventari.Name = "textBoxNumInventari";
+            this.textBoxNumInventari.Size = new System.Drawing.Size(253, 20);
+            this.textBoxNumInventari.TabIndex = 46;
+            // 
+            // numInventari
+            // 
+            this.numInventari.AutoSize = true;
+            this.numInventari.Location = new System.Drawing.Point(6, 26);
+            this.numInventari.Name = "numInventari";
+            this.numInventari.Size = new System.Drawing.Size(95, 13);
+            this.numInventari.TabIndex = 47;
+            this.numInventari.Text = "Número d\'inventari";
             // 
             // groupBoxFitxaTecnica
             // 
@@ -216,22 +232,6 @@
             this.comboBoxPotencia.Name = "comboBoxPotencia";
             this.comboBoxPotencia.Size = new System.Drawing.Size(52, 21);
             this.comboBoxPotencia.TabIndex = 48;
-            // 
-            // numInventari
-            // 
-            this.numInventari.AutoSize = true;
-            this.numInventari.Location = new System.Drawing.Point(6, 26);
-            this.numInventari.Name = "numInventari";
-            this.numInventari.Size = new System.Drawing.Size(95, 13);
-            this.numInventari.TabIndex = 47;
-            this.numInventari.Text = "Número d\'inventari";
-            // 
-            // textBoxNumInventari
-            // 
-            this.textBoxNumInventari.Location = new System.Drawing.Point(107, 23);
-            this.textBoxNumInventari.Name = "textBoxNumInventari";
-            this.textBoxNumInventari.Size = new System.Drawing.Size(253, 20);
-            this.textBoxNumInventari.TabIndex = 46;
             // 
             // formaIngres
             // 
@@ -570,6 +570,7 @@
             this.desar.TabIndex = 14;
             this.desar.Text = "Desar";
             this.desar.UseVisualStyleBackColor = true;
+            this.desar.Click += new System.EventHandler(this.desar_Click);
             // 
             // groupBoxDescripcio
             // 
@@ -601,6 +602,14 @@
             this.groupBoxMedia.TabStop = false;
             this.groupBoxMedia.Text = "Multimedia";
             // 
+            // listBoxMultimedia
+            // 
+            this.listBoxMultimedia.FormattingEnabled = true;
+            this.listBoxMultimedia.Location = new System.Drawing.Point(7, 19);
+            this.listBoxMultimedia.Name = "listBoxMultimedia";
+            this.listBoxMultimedia.Size = new System.Drawing.Size(255, 199);
+            this.listBoxMultimedia.TabIndex = 3;
+            // 
             // eliminar
             // 
             this.eliminar.Location = new System.Drawing.Point(187, 226);
@@ -609,6 +618,7 @@
             this.eliminar.TabIndex = 2;
             this.eliminar.Text = "Eliminar";
             this.eliminar.UseVisualStyleBackColor = true;
+            this.eliminar.Click += new System.EventHandler(this.eliminar_Click);
             // 
             // afegir
             // 
@@ -618,14 +628,7 @@
             this.afegir.TabIndex = 1;
             this.afegir.Text = "Afegir";
             this.afegir.UseVisualStyleBackColor = true;
-            // 
-            // listBoxMultimedia
-            // 
-            this.listBoxMultimedia.FormattingEnabled = true;
-            this.listBoxMultimedia.Location = new System.Drawing.Point(7, 19);
-            this.listBoxMultimedia.Name = "listBoxMultimedia";
-            this.listBoxMultimedia.Size = new System.Drawing.Size(255, 199);
-            this.listBoxMultimedia.TabIndex = 3;
+            this.afegir.Click += new System.EventHandler(this.afegir_Click);
             // 
             // inicisAviacio
             // 
@@ -639,6 +642,7 @@
             this.Controls.Add(this.groupBoxConfigBox);
             this.Name = "inicisAviacio";
             this.Text = "Inicis de l\'aviació";
+            this.Load += new System.EventHandler(this.Form6_Load);
             this.groupBoxConfigBox.ResumeLayout(false);
             this.groupBoxConfigBox.PerformLayout();
             this.groupBoxFitxaTecnica.ResumeLayout(false);

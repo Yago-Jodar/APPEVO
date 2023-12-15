@@ -20,7 +20,7 @@ namespace MuseumTool
         }
 
 
-        private void Form4_Load(object sender, EventArgs e)
+        private void Form6_Load(object sender, EventArgs e)
         {
             List<Colleccions> colleccioList;
 
@@ -38,7 +38,7 @@ namespace MuseumTool
 
             if (initializationMode && numInventariSel != 0)
             {
-                string existingJson = File.ReadAllText(@"..\..\JSON\motocicletesCatalanes.json");
+                string existingJson = File.ReadAllText(@"..\..\JSON\inicisAviacio.json");
 
                 JArray jsonArray = JArray.Parse(existingJson);
 
@@ -139,7 +139,7 @@ namespace MuseumTool
         private void desar_Click(object sender, EventArgs e)
         {
             // Ruta del archivo JSON
-            string jsonFilePath = @"..\..\JSON\motociclestesCatalanes.json";
+            string jsonFilePath = @"..\..\JSON\inicisAviacio.json";
 
             // Crear una lista para almacenar objetos InfoCarrierBombers
             List<InfoCarrierInicisAviacio> infoList;

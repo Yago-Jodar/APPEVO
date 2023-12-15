@@ -42,6 +42,38 @@ namespace MuseumTool
                     ubicacioDesat = ambitDir;
                     break;
 
+                case "Motocicletes Catalanes":
+                    ambitDir = @"..\..\JSON\motocicletesCatalanes.json";
+                    ambitGeneral = JArray.Parse(File.ReadAllText(ambitDir));
+
+                    dataGridViewObjectes.DataSource = ambitGeneral;
+                    ubicacioDesat = ambitDir;
+                    break;
+
+                case "Microcotxes i prototips elèctrics":
+                    ambitDir = @"..\..\JSON\MicrocotxesIPrototips.json";
+                    ambitGeneral = JArray.Parse(File.ReadAllText(ambitDir));
+
+                    dataGridViewObjectes.DataSource = ambitGeneral;
+                    ubicacioDesat = ambitDir;
+                    break;
+
+                case "La revolució de l'utilitari":
+                    ambitDir = @"..\..\JSON\revolucioUtilitari.json";
+                    ambitGeneral = JArray.Parse(File.ReadAllText(ambitDir));
+
+                    dataGridViewObjectes.DataSource = ambitGeneral;
+                    ubicacioDesat = ambitDir;
+                    break;
+
+                case "Inicis de l'aviació":
+                    ambitDir = @"..\..\JSON\inicisAviacio.json";
+                    ambitGeneral = JArray.Parse(File.ReadAllText(ambitDir));
+
+                    dataGridViewObjectes.DataSource = ambitGeneral;
+                    ubicacioDesat = ambitDir;
+                    break;
+
                 default:
                     MessageBox.Show($"Selecciona un àmbit vàlid per a llistar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;

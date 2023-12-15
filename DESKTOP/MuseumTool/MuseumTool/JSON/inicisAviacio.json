@@ -1,0 +1,34 @@
+[
+  {
+    "numInventari": 1,
+    "collceccio": "Yago",
+    "name": "Avio1",
+    "any": 1920,
+    "llocFabricacio": "España",
+    "procedencia": "Catalunya",
+    "fontEnergia": "gasoil",
+    "longitud": 122.0,
+    "alcada": 231.0,
+    "envergadura": 122.0,
+    "pes": 800.0,
+    "pesMax": 1200.0,
+    "cicle": 2,
+    "cilindrada": 2000.0,
+    "potencia": "1200 cv",
+    "potenciaVal": 1200.0,
+    "potenciaType": "cv",
+    "velocitatMaxima": 1200,
+    "velocitatcreuer": 700,
+    "capacitatDiposit": 400,
+    "autonomia": 70.0,
+    "autonomiaTemps": 24.0,
+    "quilometresFets": 280000.0,
+    "sostreMax": 12000,
+    "formaIngres": "Dipòsit",
+    "fontIngres": "papa",
+    "multimedia": [
+      "..\\..\\multimedia\\MNACTEC-Logo.png"
+    ],
+    "descripcio": "avion ficticio1"
+  }
+]
