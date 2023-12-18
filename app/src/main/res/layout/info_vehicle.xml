@@ -72,9 +72,9 @@
                 android:layout_margin="5dp"
                 android:backgroundTint="@color/cardview_shadow_start_color"
                 android:fontFamily="@font/aclonica"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:text="JUGAR"
-                android:textSize="16sp"
+                android:textSize="20sp"
 
                 />
 
@@ -102,11 +102,7 @@
                     android:src="@drawable/bandera_cat"
                     android:scaleType="centerCrop"/>
 
-
             </RadioGroup>
-
-
-
 
         </LinearLayout>
     </LinearLayout>
@@ -144,67 +140,122 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:text="Ficha técnica"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    />
 
-                <TextView
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="18dp"
+                        android:paddingTop="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Any: 1934"
+                            android:textSize="22sp"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Lloc de fabricació: Lliça d'Amunt"
+                            android:textSize="22sp"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Longitud: 6'30m"
+                            android:textSize="22sp"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Envergadura: 10'18m"
+                            android:textSize="22sp"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Pes: 1.300 kg"
+                            android:textSize="22sp"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Cilindrada: 9 cilindres en estrella"
+                            android:textSize="22sp"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Potència: 750cv"
+                            android:textSize="22sp"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Velocitat màxima: 370 km\h"
+                            android:textSize="22sp"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Velocitat de creuer: 180 km\h"
+                            android:textSize="22sp"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Autonomia: 780km"
+                            android:textSize="22sp"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Sostre màxim de vol: 9.800 m"
+                            android:textSize="22sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Forma d'ingres: Donació"
+                            android:textSize="22sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Font d'ingrés: Lluís Moncaui Prims"
+                            android:textSize="22sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Número d'inventari: 6982"
+                            android:textSize="22sp"/>
+
+                    </LinearLayout>
+
+                </ScrollView>
 
             </LinearLayout>
 
@@ -218,11 +269,13 @@
             android:layout_weight="1"
             android:padding="15dp">
 
-
-            <TextView
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Maquetaa escala 1:2 de l'avió d'origen soviètic,
+                android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Maquetaa escala 1:2 de l'avió d'origen soviètic,
 molt maniobrable i amb gran velocitat d'ascens.
 Va ser dissenyat per l'enginyer Nikolái Nikoláyevich
 Polikárpovi l'any 1934 es va començar a produir
@@ -238,12 +291,13 @@ contra els japonesos i del
 1939 al 1940 van tenir
 una actuació destacada
 a Finlàndia."
-                android:textSize="25sp"
-                android:padding="10dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:textStyle="bold"
-                />
+                        android:textSize="25sp"
+                        android:padding="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="bold"
+                        />
+            </ScrollView>
 
         </LinearLayout>
     </LinearLayout>

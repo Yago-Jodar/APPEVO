@@ -57,19 +57,23 @@
                 android:onClick="onAnteriorClick"
                 />
 
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="1100dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:justificationMode="inter_word"
+                    android:shadowColor="#000000"
+                    android:shadowDx="10"
+                    android:shadowDy="10"
+                    android:shadowRadius="20"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp" />
 
-            <TextView
-                android:id="@+id/txtDescription"
-                android:layout_width="1100dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:justificationMode="inter_word"
-                android:shadowColor="#000000"
-                android:shadowDx="10"
-                android:shadowDy="10"
-                android:shadowRadius="20"
-                android:textColor="#FFFFFF"
-                android:textSize="30sp" />
+            </ScrollView>
 
             <ImageButton
                 android:id="@+id/cickRight"
@@ -96,39 +100,32 @@
                 android:layout_weight="1">
 
                 <RadioGroup
-                    android:id="@+id/radioGroupIdiomas"
+                    android:id="@+id/radioGroupLenguages"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="50dp"
-                    android:orientation="horizontal">
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="40dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
 
-                    <RadioButton
-                        android:id="@+id/radioButtonCatalan"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="10dp"
-                        android:button="@null"
-                        android:drawableTop="@drawable/bandera_cat" />
+                    <ImageButton
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/bandera_uk"
+                        android:scaleType="centerCrop"/>
 
-                    <RadioButton
-                        android:id="@+id/radioButtonSpanish"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="10dp"
-                        android:button="@null"
-                        android:drawableTop="@drawable/bandera_es" />
+                    <ImageButton
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/bandera_es"
+                        android:scaleType="centerCrop"/>
 
-                    <RadioButton
-                        android:id="@+id/radioButtonEnglish"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="10dp"
-                        android:button="@null"
-                        android:drawableTop="@drawable/bandera_uk" />
+                    <ImageButton
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/bandera_cat"
+                        android:scaleType="centerCrop"/>
 
                 </RadioGroup>
-
 
             </LinearLayout>
 
