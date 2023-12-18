@@ -1,3 +1,9 @@
 package com.example.appevo09
 
-class Ambit ( var id: Int, var title: String, var description: String, var image: Int)
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import java.io.FileReader
+
+class Ambit ( val id: Int, val title: String, val description: String, val multimedia: String)
+
+

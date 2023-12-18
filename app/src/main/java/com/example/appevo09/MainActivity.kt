@@ -1,10 +1,12 @@
 package com.example.appevo09
 
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.TextView
@@ -21,10 +23,6 @@ class MainActivity : AppCompatActivity() {
     //Posición inicial del ámbito
     var indiceActual = 0
 
-    //Cambiar la UI de ámbitos cada cierto tiempo
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,7 +30,9 @@ class MainActivity : AppCompatActivity() {
 
         ambits = getAmbitsFromJson()
 
-        cambiarUI()
+        if (ambits.isNotEmpty()) {
+            cambiarUI()
+        }
 
 
         //Botón para entrar de la UI de los ámbitos a la de vehículos.
@@ -40,63 +40,61 @@ class MainActivity : AppCompatActivity() {
 
         botonEntrar.setOnClickListener {
 
-            val intent = Intent(this, Vehicle::class.java)
-            startActivity(intent)
+            setContentView(R.layout.info_vehicle)
+
+            val clickBack: ImageButton = findViewById(R.id.clickBack)
+
+            clickBack.setOnClickListener {
+                setContentView(R.layout.activity_main)
+            }
         }
 
 
+
+
+
         //Cambiar de idioma.
-        val idiomas = listOf("Catalán", "Español", "Inglés")
-        val banderas = listOf(R.drawable.bandera_cat, R.drawable.bandera_es, R.drawable.bandera_uk)
+        //val idiomas = listOf("Catalán", "Español", "Inglés")
+        //val banderas = listOf(R.drawable.bandera_cat, R.drawable.bandera_es, R.drawable.bandera_uk)
 
-        val adapter = SpinnerIdiomas(this, idiomas, banderas)
+        //val adapter = SpinnerIdiomas(this, idiomas, banderas)
 
-        val spinner: Spinner = findViewById(R.id.spinnerIdiomas1)
-        spinner.adapter = adapter
+        //val spinner: Spinner = findViewById(R.id.spinnerIdiomas1)
+        //spinner.adapter = adapter
 
 
     }
 
     fun getAmbitsFromJson(): MutableList<Ambit> {
-        // Nombre del archivo JSON que se encuentra en el directorio 'assets'
-        val jsonName = "ambitos.json"
-
-        try {
-            // Abre un InputStream para leer el archivo JSON desde el directorio 'assets'
-            val inputStream = assets.open(jsonName)
-
-            // Crea un lector InputStreamReader para leer el contenido del InputStream
-            val reader = InputStreamReader(inputStream)
-
-            // Especifica el tipo de lista que Gson debe deserializar
-            val listAmbitsType = object : TypeToken<MutableList<Ambit>>() {}.type
-
-            // Utiliza Gson para deserializar el contenido del archivo JSON a una lista de objetos Ambit
-            return Gson().fromJson(reader, listAmbitsType)
-        } catch (e: Exception) {
-            // Maneja cualquier excepción que pueda ocurrir durante la lectura o deserialización
-            e.printStackTrace()
-
-            // En caso de error, devuelve una lista vacía para evitar problemas adicionales
-            return mutableListOf()
-        }
+        val jsonFilePath = getFilesDir().toString() + "/json/ambits.json"
+        val jsonFile = FileReader(jsonFilePath)
+        val listAmbitsType = object : TypeToken<MutableList<Ambit>>() {}.type
+        val ambits: MutableList<Ambit> = Gson().fromJson(jsonFile, listAmbitsType)
+        return ambits
     }
-
-
 
     //Cambiar la UI de un ámbito a otro.
     fun cambiarUI() {
 
-        val ambitoActual = ambits [indiceActual]
+        if (ambits.isNotEmpty()) {
+            val ambitoActual = ambits[indiceActual]
 
-        // Accede a los elementos de la interfaz de usuario por sus ID y actualiza la información
-        val txtTitle: TextView = findViewById(R.id.txtTitlePrincipal)
-        val background_image: ImageView = findViewById(R.id.background_image)
-        val txtDescription: TextView = findViewById(R.id.txtDescription)
+            // Accede a los elementos de la interfaz de usuario por sus ID y actualiza la información
+            val txtTitle: TextView = findViewById(R.id.txtTitlePrincipal)
+            val background_image: ImageView = findViewById(R.id.background_image)
+            val txtDescription: TextView = findViewById(R.id.txtDescription)
 
-        txtTitle.text = ambitoActual.title
-        background_image.setImageResource(ambitoActual.image)
-        txtDescription.text = ambitoActual.description
+            txtTitle.text = ambitoActual.title
+
+            //Importar imagen de los archivos
+            val ambitPath = getFilesDir().toString() + "/img/ambits/" + ambitoActual.multimedia
+            val bitmap = BitmapFactory.decodeFile(ambitPath)
+            background_image.setImageBitmap(bitmap)
+
+            //background_image.setImageResource(ambitoActual.image)
+
+            txtDescription.text = ambitoActual.description
+        }
     }
 
     // Método para manejar el botón siguiente

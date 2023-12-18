@@ -60,7 +60,7 @@
 
             <TextView
                 android:id="@+id/txtDescription"
-                android:layout_width="1150dp"
+                android:layout_width="1100dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
                 android:justificationMode="inter_word"
@@ -69,7 +69,7 @@
                 android:shadowDy="10"
                 android:shadowRadius="20"
                 android:textColor="#FFFFFF"
-                android:textSize="32.5sp" />
+                android:textSize="30sp" />
 
             <ImageButton
                 android:id="@+id/cickRight"
@@ -91,18 +91,44 @@
             android:baselineAligned="false">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <Spinner
-                    android:id="@+id/spinnerIdiomas1"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="37.5dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@drawable/spinner_idiomas"
-                    android:spinnerMode="dropdown" />
+                <RadioGroup
+                    android:id="@+id/radioGroupIdiomas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="50dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonCatalan"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:button="@null"
+                        android:drawableTop="@drawable/bandera_cat" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSpanish"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:button="@null"
+                        android:drawableTop="@drawable/bandera_es" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonEnglish"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:button="@null"
+                        android:drawableTop="@drawable/bandera_uk" />
+
+                </RadioGroup>
+
 
             </LinearLayout>
 

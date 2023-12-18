@@ -1,6 +1,7 @@
 package com.example.appevo09
 
 import android.content.Context
+import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,7 +32,12 @@ class AmbitAdapter (context : Context, val layout : Int, val ambits : MutableLis
     fun bindAmbit(view: View, ambit: Ambit){
 
         val imgAmbit : ImageView = view.findViewById(R.id.background_image)
-        imgAmbit.setImageResource(ambit.image)
+
+        //imgAmbit.setImageResource(ambit.image)
+
+        val ambitPath = context.getFilesDir().toString() + "/img/ambits/" + ambit.multimedia
+        val bitmap = BitmapFactory.decodeFile(ambitPath)
+        imgAmbit.setImageBitmap(bitmap)
 
         val titlePrincipal : TextView = view.findViewById(R.id.txtTitlePrincipal)
         titlePrincipal.text = ambit.title
