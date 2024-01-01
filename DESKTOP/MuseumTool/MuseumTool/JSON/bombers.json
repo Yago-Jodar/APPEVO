@@ -1,9 +1,5 @@
 [
   {
-    "numInventari": 1,
-    "collceccio": "Yago",
-    "name": "YagoBombers",
-    "any": 2004,
     "llocFabricacio": "Barna",
     "cicle": 2,
     "cilindrada": 240.0,
@@ -15,7 +11,30 @@
     "autonomia": 20.0,
     "formaIngres": "Compra",
     "fontIngres": "Yago",
+    "numInventari": 1,
+    "collceccio": "Yago",
+    "name": "YagoBombers",
+    "any": 2004,
     "multimedia": [],
     "descripcio": "papas fritas"
+  },
+  {
+    "llocFabricacio": "Barcelona",
+    "cicle": 2,
+    "cilindrada": 1200.0,
+    "potencia": "123 HP",
+    "potenciaVal": 123.0,
+    "potenciaType": "HP",
+    "velocitatMaxima": 1232,
+    "capacitatDiposit": 2342,
+    "autonomia": 1234.0,
+    "formaIngres": "Compra",
+    "fontIngres": "yago",
+    "numInventari": 49,
+    "collceccio": "Yago",
+    "name": "prueba herencia 1",
+    "any": 2023,
+    "multimedia": [],
+    "descripcio": ""
   }
 ]

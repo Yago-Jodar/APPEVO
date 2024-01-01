@@ -51,7 +51,7 @@ namespace MuseumTool
                     break;
 
                 case "Microcotxes i prototips elèctrics":
-                    ambitDir = @"..\..\JSON\MicrocotxesIPrototips.json";
+                    ambitDir = @"..\..\JSON\microcotxesElectricsIPrototips.json";
                     ambitGeneral = JArray.Parse(File.ReadAllText(ambitDir));
 
                     dataGridViewObjectes.DataSource = ambitGeneral;

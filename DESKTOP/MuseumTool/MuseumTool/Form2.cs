@@ -85,7 +85,7 @@ namespace MuseumTool
 
             DialogResult result = file.ShowDialog();
             if (result == DialogResult.OK)
-            {
+            {  
                 foreach (string filePath in file.FileNames)
                 {
                     string filename = Path.GetFileName(filePath);

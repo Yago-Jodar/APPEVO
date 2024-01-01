@@ -162,6 +162,7 @@
             this.buttonDesar.TabIndex = 5;
             this.buttonDesar.Text = "Desar";
             this.buttonDesar.UseVisualStyleBackColor = true;
+            this.buttonDesar.Click += new System.EventHandler(this.buttonDesar_Click);
             // 
             // gestorPreguntes
             // 

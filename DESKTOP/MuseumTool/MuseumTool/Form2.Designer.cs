@@ -99,6 +99,7 @@
             this.textBoxDescripcio.Location = new System.Drawing.Point(6, 19);
             this.textBoxDescripcio.Multiline = true;
             this.textBoxDescripcio.Name = "textBoxDescripcio";
+            this.textBoxDescripcio.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxDescripcio.Size = new System.Drawing.Size(255, 193);
             this.textBoxDescripcio.TabIndex = 1;
             // 

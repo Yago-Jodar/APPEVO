@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace MuseumTool
 {
-    internal class InfoCarrierBombers
+    internal class InfoCarrierBombers : InfoCarrier
     {
-        public int numInventari { get; set; }
-        public string collceccio { get; set; }
-        public string name { get; set; }
-        public int any { get; set; }
         public string llocFabricacio { get; set; }
         public int cicle { get; set; }
         public float cilindrada { get; set; }
@@ -24,7 +20,5 @@ namespace MuseumTool
         public float autonomia { get; set; }
         public string formaIngres { get; set; }
         public string fontIngres { get; set; }
-        public JArray multimedia { get; set; }
-        public string descripcio { get; set; }
     }
 }

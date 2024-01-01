@@ -127,7 +127,7 @@ namespace MuseumTool
         private void desar_Click(object sender, EventArgs e)
         {
             // Ruta del archivo JSON
-            string jsonFilePath = @"..\..\JSON\motociclestesCatalanes.json";
+            string jsonFilePath = @"..\..\JSON\motocicletesCatalanes.json";
 
             // Crear una lista para almacenar objetos InfoCarrierBombers
             List<InfoCarrierMotocicletesCatalanes> infoList;

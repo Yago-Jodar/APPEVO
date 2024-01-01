@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace MuseumTool
 {
-    internal class InfoCarrierInicisAviacio
+    internal class InfoCarrierInicisAviacio : InfoCarrier
     {
-        public int numInventari { get; set; }
-        public string collceccio { get; set; }
-        public string name { get; set; }
-        public int any { get; set; }
         public string llocFabricacio { get; set; }
         public string procedencia { get; set; }
         public string fontEnergia { get; set; }
@@ -35,7 +31,5 @@ namespace MuseumTool
         public int sostreMax {  get; set; }
         public string formaIngres { get; set; }
         public string fontIngres { get; set; }
-        public JArray multimedia { get; set; }
-        public string descripcio { get; set; }
     }
 }

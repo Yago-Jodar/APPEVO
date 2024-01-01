@@ -12,9 +12,17 @@ namespace MuseumTool
 {
     public partial class gestorPreguntes : Form
     {
+        public Boolean initializationMode { get; set; }
+        public int numInventariSel { get; set; }
+
         public gestorPreguntes()
         {
             InitializeComponent();
+        }
+
+        private void buttonDesar_Click(object sender, EventArgs e)
+        {
+            preguntasCarrier guardarPregunta = new preguntasCarrier();
         }
     }
 }
