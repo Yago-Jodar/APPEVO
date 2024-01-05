@@ -40,27 +40,12 @@ class MainActivity : AppCompatActivity() {
 
         botonEntrar.setOnClickListener {
 
-            setContentView(R.layout.info_vehicle)
+            // Crear un Intent para pasar de MainActivity a VehicleActivity
+            val intent = Intent(this@MainActivity, VehicleActivity::class.java)
 
-            val clickBack: ImageButton = findViewById(R.id.clickBack)
-
-            clickBack.setOnClickListener {
-                setContentView(R.layout.activity_main)
-            }
+            // Iniciar la nueva actividad
+            startActivity(intent)
         }
-
-
-
-
-
-        //Cambiar de idioma.
-        //val idiomas = listOf("Catalán", "Español", "Inglés")
-        //val banderas = listOf(R.drawable.bandera_cat, R.drawable.bandera_es, R.drawable.bandera_uk)
-
-        //val adapter = SpinnerIdiomas(this, idiomas, banderas)
-
-        //val spinner: Spinner = findViewById(R.id.spinnerIdiomas1)
-        //spinner.adapter = adapter
 
 
     }

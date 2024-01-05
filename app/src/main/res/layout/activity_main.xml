@@ -71,7 +71,8 @@
                     android:shadowDy="10"
                     android:shadowRadius="20"
                     android:textColor="#FFFFFF"
-                    android:textSize="30sp" />
+                    android:textSize="30sp"
+                    android:padding="5dp"/>
 
             </ScrollView>
 
@@ -111,19 +112,22 @@
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:src="@drawable/bandera_uk"
-                        android:scaleType="centerCrop"/>
+                        android:scaleType="centerCrop"
+                        android:contentDescription="english"/>
 
                     <ImageButton
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:src="@drawable/bandera_es"
-                        android:scaleType="centerCrop"/>
+                        android:scaleType="centerCrop"
+                        android:contentDescription="español"/>
 
                     <ImageButton
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:src="@drawable/bandera_cat"
-                        android:scaleType="centerCrop"/>
+                        android:scaleType="centerCrop"
+                        android:contentDescription="catalá"/>
 
                 </RadioGroup>
 

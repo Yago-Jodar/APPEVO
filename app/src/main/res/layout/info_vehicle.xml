@@ -40,7 +40,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/txtTitleVehicle"
+                    android:id="@+id/txtNom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/aclonica"
@@ -121,6 +121,7 @@
             android:layout_marginTop="20dp">
 
             <ImageView
+                android:id="@+id/imgMultimedia"
                 android:layout_width="0sp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -155,7 +156,17 @@
                         android:orientation="vertical"
                         android:paddingStart="18dp"
                         android:paddingTop="10dp">
+
                         <TextView
+                            android:id="@+id/txtNumInventari"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="num Inventari: xxxx"
+                            android:textSize="22sp"/>
+
+                        <TextView
+                            android:id="@+id/txtAny"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -163,6 +174,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
+                            android:id="@+id/txtLlocDeFabricacio"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -170,6 +182,23 @@
                             android:textSize="22sp"/>
 
                         <TextView
+                            android:id="@+id/txtProcedencia"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Procedencia: "
+                            android:textSize="22sp"/>
+
+                        <TextView
+                            android:id="@+id/txtFontEnergia"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Font d'energia: "
+                            android:textSize="22sp"/>
+
+                        <TextView
+                            android:id="@+id/txtLlongitud"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -177,6 +206,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
+                            android:id="@+id/txtEnvergadura"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -184,6 +214,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
+                            android:id="@+id/txtPes"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -191,6 +222,15 @@
                             android:textSize="22sp"/>
 
                         <TextView
+                            android:id="@+id/txtCicle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Cicle: "
+                            android:textSize="22sp"/>
+
+                        <TextView
+                            android:id="@+id/txtCilindrada"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -198,6 +238,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
+                            android:id="@+id/txtPotencia"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -205,6 +246,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
+                            android:id="@+id/txtVelocitatMax"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -212,6 +254,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
+                            android:id="@+id/txtVelocitatCreuer"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -219,6 +262,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
+                            android:id="@+id/txtAutonomia"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -226,6 +270,15 @@
                             android:textSize="22sp"/>
 
                         <TextView
+                            android:id="@+id/txtCapacitatDeposit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="CapacitatDeposit: "
+                            android:textSize="22sp"/>
+
+                        <TextView
+                            android:id="@+id/txtSostreMaximDeVol"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -233,6 +286,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
+                            android:id="@+id/txtFormaIngres"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -240,6 +294,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
+                            android:id="@+id/txtFontIngres"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -247,10 +302,11 @@
                             android:textSize="22sp"/>
 
                         <TextView
+                            android:id="@+id/txtAlcada"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Número d'inventari: 6982"
+                            android:text="Alçada: "
                             android:textSize="22sp"/>
 
                     </LinearLayout>
@@ -273,8 +329,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                     <TextView
+                        android:id="@+id/txtDescripcio"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="Maquetaa escala 1:2 de l'avió d'origen soviètic,
 molt maniobrable i amb gran velocitat d'ascens.
 Va ser dissenyat per l'enginyer Nikolái Nikoláyevich
