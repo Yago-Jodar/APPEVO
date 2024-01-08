@@ -117,7 +117,9 @@
     <Compile Include="InfoCarrier.cs" />
     <Compile Include="Colleccions.cs" />
     <Compile Include="InfoCarrierMotocicletesCatalanes.cs" />
-    <Compile Include="preguntasCarrier.cs" />
+    <Compile Include="PreguntasCarrierCat.cs" />
+    <Compile Include="PreguntasCarrierEng.cs" />
+    <Compile Include="PreguntasCarrierEsp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -159,6 +161,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="JSON\bombers.json" />
+    <None Include="JSON\preguntes\preguntesEng.json" />
+    <None Include="JSON\preguntes\preguntesCat.json" />
+    <None Include="JSON\preguntes\preguntesEsp.json" />
     <None Include="JSON\revolucioUtilitari.json" />
     <None Include="JSON\microcotxesElectricsIPrototips.json" />
     <None Include="JSON\inicisAviacio.json" />

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.labelPregunta = new System.Windows.Forms.Label();
-            this.textBoxPregunta = new System.Windows.Forms.TextBox();
-            this.textBoxRespostaA = new System.Windows.Forms.TextBox();
+            this.textBoxPreguntaCat = new System.Windows.Forms.TextBox();
+            this.textBoxRespostaACat = new System.Windows.Forms.TextBox();
             this.labelRespostaA = new System.Windows.Forms.Label();
-            this.textBoxRespostaB = new System.Windows.Forms.TextBox();
+            this.textBoxRespostaBCat = new System.Windows.Forms.TextBox();
             this.labelRespostaB = new System.Windows.Forms.Label();
-            this.textBoxRespostaC = new System.Windows.Forms.TextBox();
+            this.textBoxRespostaCCat = new System.Windows.Forms.TextBox();
             this.labelRespostaC = new System.Windows.Forms.Label();
             this.radioButtonA = new System.Windows.Forms.RadioButton();
             this.radioButtonB = new System.Windows.Forms.RadioButton();
@@ -42,23 +42,23 @@
             this.groupBoxRespostaCorrecta = new System.Windows.Forms.GroupBox();
             this.buttonDesar = new System.Windows.Forms.Button();
             this.groupBoxESP = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxRespostaCEsp = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxPreguntaEsp = new System.Windows.Forms.TextBox();
+            this.textBoxRespostaBEsp = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxRespostaAEsp = new System.Windows.Forms.TextBox();
             this.groupBoxENG = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxRespostaCEng = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxPreguntaEng = new System.Windows.Forms.TextBox();
+            this.textBoxRespostaBEng = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxRespostaAEng = new System.Windows.Forms.TextBox();
             this.groupBoxCAT = new System.Windows.Forms.GroupBox();
             this.buttonTancar = new System.Windows.Forms.Button();
             this.groupBoxRespostaCorrecta.SuspendLayout();
@@ -76,20 +76,20 @@
             this.labelPregunta.TabIndex = 0;
             this.labelPregunta.Text = "Pregunta";
             // 
-            // textBoxPregunta
+            // textBoxPreguntaCat
             // 
-            this.textBoxPregunta.Location = new System.Drawing.Point(9, 35);
-            this.textBoxPregunta.Multiline = true;
-            this.textBoxPregunta.Name = "textBoxPregunta";
-            this.textBoxPregunta.Size = new System.Drawing.Size(249, 47);
-            this.textBoxPregunta.TabIndex = 1;
+            this.textBoxPreguntaCat.Location = new System.Drawing.Point(9, 35);
+            this.textBoxPreguntaCat.Multiline = true;
+            this.textBoxPreguntaCat.Name = "textBoxPreguntaCat";
+            this.textBoxPreguntaCat.Size = new System.Drawing.Size(249, 47);
+            this.textBoxPreguntaCat.TabIndex = 1;
             // 
-            // textBoxRespostaA
+            // textBoxRespostaACat
             // 
-            this.textBoxRespostaA.Location = new System.Drawing.Point(9, 111);
-            this.textBoxRespostaA.Name = "textBoxRespostaA";
-            this.textBoxRespostaA.Size = new System.Drawing.Size(249, 20);
-            this.textBoxRespostaA.TabIndex = 2;
+            this.textBoxRespostaACat.Location = new System.Drawing.Point(9, 111);
+            this.textBoxRespostaACat.Name = "textBoxRespostaACat";
+            this.textBoxRespostaACat.Size = new System.Drawing.Size(249, 20);
+            this.textBoxRespostaACat.TabIndex = 2;
             // 
             // labelRespostaA
             // 
@@ -100,12 +100,12 @@
             this.labelRespostaA.TabIndex = 0;
             this.labelRespostaA.Text = "Resposta A)";
             // 
-            // textBoxRespostaB
+            // textBoxRespostaBCat
             // 
-            this.textBoxRespostaB.Location = new System.Drawing.Point(9, 150);
-            this.textBoxRespostaB.Name = "textBoxRespostaB";
-            this.textBoxRespostaB.Size = new System.Drawing.Size(249, 20);
-            this.textBoxRespostaB.TabIndex = 3;
+            this.textBoxRespostaBCat.Location = new System.Drawing.Point(9, 150);
+            this.textBoxRespostaBCat.Name = "textBoxRespostaBCat";
+            this.textBoxRespostaBCat.Size = new System.Drawing.Size(249, 20);
+            this.textBoxRespostaBCat.TabIndex = 3;
             // 
             // labelRespostaB
             // 
@@ -116,12 +116,12 @@
             this.labelRespostaB.TabIndex = 0;
             this.labelRespostaB.Text = "Resposta B)";
             // 
-            // textBoxRespostaC
+            // textBoxRespostaCCat
             // 
-            this.textBoxRespostaC.Location = new System.Drawing.Point(9, 189);
-            this.textBoxRespostaC.Name = "textBoxRespostaC";
-            this.textBoxRespostaC.Size = new System.Drawing.Size(249, 20);
-            this.textBoxRespostaC.TabIndex = 4;
+            this.textBoxRespostaCCat.Location = new System.Drawing.Point(9, 189);
+            this.textBoxRespostaCCat.Name = "textBoxRespostaCCat";
+            this.textBoxRespostaCCat.Size = new System.Drawing.Size(249, 20);
+            this.textBoxRespostaCCat.TabIndex = 4;
             // 
             // labelRespostaC
             // 
@@ -189,14 +189,14 @@
             // 
             // groupBoxESP
             // 
-            this.groupBoxESP.Controls.Add(this.textBox1);
+            this.groupBoxESP.Controls.Add(this.textBoxRespostaCEsp);
             this.groupBoxESP.Controls.Add(this.label4);
             this.groupBoxESP.Controls.Add(this.label1);
-            this.groupBoxESP.Controls.Add(this.textBox4);
-            this.groupBoxESP.Controls.Add(this.textBox2);
+            this.groupBoxESP.Controls.Add(this.textBoxPreguntaEsp);
+            this.groupBoxESP.Controls.Add(this.textBoxRespostaBEsp);
             this.groupBoxESP.Controls.Add(this.label3);
             this.groupBoxESP.Controls.Add(this.label2);
-            this.groupBoxESP.Controls.Add(this.textBox3);
+            this.groupBoxESP.Controls.Add(this.textBoxRespostaAEsp);
             this.groupBoxESP.Location = new System.Drawing.Point(282, 12);
             this.groupBoxESP.Name = "groupBoxESP";
             this.groupBoxESP.Size = new System.Drawing.Size(269, 222);
@@ -204,61 +204,12 @@
             this.groupBoxESP.TabStop = false;
             this.groupBoxESP.Text = "ESP";
             // 
-            // textBox1
+            // textBoxRespostaCEsp
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 189);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 20);
-            this.textBox1.TabIndex = 14;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 173);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Resposta C)";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(9, 150);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(254, 20);
-            this.textBox2.TabIndex = 13;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 134);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Resposta B)";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(9, 111);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(254, 20);
-            this.textBox3.TabIndex = 12;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 95);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Resposta A)";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(9, 35);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(254, 47);
-            this.textBox4.TabIndex = 11;
+            this.textBoxRespostaCEsp.Location = new System.Drawing.Point(9, 189);
+            this.textBoxRespostaCEsp.Name = "textBoxRespostaCEsp";
+            this.textBoxRespostaCEsp.Size = new System.Drawing.Size(254, 20);
+            this.textBoxRespostaCEsp.TabIndex = 14;
             // 
             // label4
             // 
@@ -269,16 +220,65 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Pregunta";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 173);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Resposta C)";
+            // 
+            // textBoxPreguntaEsp
+            // 
+            this.textBoxPreguntaEsp.Location = new System.Drawing.Point(9, 35);
+            this.textBoxPreguntaEsp.Multiline = true;
+            this.textBoxPreguntaEsp.Name = "textBoxPreguntaEsp";
+            this.textBoxPreguntaEsp.Size = new System.Drawing.Size(254, 47);
+            this.textBoxPreguntaEsp.TabIndex = 11;
+            // 
+            // textBoxRespostaBEsp
+            // 
+            this.textBoxRespostaBEsp.Location = new System.Drawing.Point(9, 150);
+            this.textBoxRespostaBEsp.Name = "textBoxRespostaBEsp";
+            this.textBoxRespostaBEsp.Size = new System.Drawing.Size(254, 20);
+            this.textBoxRespostaBEsp.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 95);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Resposta A)";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Resposta B)";
+            // 
+            // textBoxRespostaAEsp
+            // 
+            this.textBoxRespostaAEsp.Location = new System.Drawing.Point(9, 111);
+            this.textBoxRespostaAEsp.Name = "textBoxRespostaAEsp";
+            this.textBoxRespostaAEsp.Size = new System.Drawing.Size(254, 20);
+            this.textBoxRespostaAEsp.TabIndex = 12;
+            // 
             // groupBoxENG
             // 
-            this.groupBoxENG.Controls.Add(this.textBox5);
+            this.groupBoxENG.Controls.Add(this.textBoxRespostaCEng);
             this.groupBoxENG.Controls.Add(this.label5);
             this.groupBoxENG.Controls.Add(this.label6);
-            this.groupBoxENG.Controls.Add(this.textBox6);
-            this.groupBoxENG.Controls.Add(this.textBox7);
+            this.groupBoxENG.Controls.Add(this.textBoxPreguntaEng);
+            this.groupBoxENG.Controls.Add(this.textBoxRespostaBEng);
             this.groupBoxENG.Controls.Add(this.label7);
             this.groupBoxENG.Controls.Add(this.label8);
-            this.groupBoxENG.Controls.Add(this.textBox8);
+            this.groupBoxENG.Controls.Add(this.textBoxRespostaAEng);
             this.groupBoxENG.Location = new System.Drawing.Point(557, 12);
             this.groupBoxENG.Name = "groupBoxENG";
             this.groupBoxENG.Size = new System.Drawing.Size(269, 222);
@@ -286,12 +286,12 @@
             this.groupBoxENG.TabStop = false;
             this.groupBoxENG.Text = "ENG";
             // 
-            // textBox5
+            // textBoxRespostaCEng
             // 
-            this.textBox5.Location = new System.Drawing.Point(9, 189);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(254, 20);
-            this.textBox5.TabIndex = 14;
+            this.textBoxRespostaCEng.Location = new System.Drawing.Point(9, 189);
+            this.textBoxRespostaCEng.Name = "textBoxRespostaCEng";
+            this.textBoxRespostaCEng.Size = new System.Drawing.Size(254, 20);
+            this.textBoxRespostaCEng.TabIndex = 14;
             // 
             // label5
             // 
@@ -311,20 +311,20 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Resposta C)";
             // 
-            // textBox6
+            // textBoxPreguntaEng
             // 
-            this.textBox6.Location = new System.Drawing.Point(9, 35);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(254, 47);
-            this.textBox6.TabIndex = 11;
+            this.textBoxPreguntaEng.Location = new System.Drawing.Point(9, 35);
+            this.textBoxPreguntaEng.Multiline = true;
+            this.textBoxPreguntaEng.Name = "textBoxPreguntaEng";
+            this.textBoxPreguntaEng.Size = new System.Drawing.Size(254, 47);
+            this.textBoxPreguntaEng.TabIndex = 11;
             // 
-            // textBox7
+            // textBoxRespostaBEng
             // 
-            this.textBox7.Location = new System.Drawing.Point(9, 150);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(254, 20);
-            this.textBox7.TabIndex = 13;
+            this.textBoxRespostaBEng.Location = new System.Drawing.Point(9, 150);
+            this.textBoxRespostaBEng.Name = "textBoxRespostaBEng";
+            this.textBoxRespostaBEng.Size = new System.Drawing.Size(254, 20);
+            this.textBoxRespostaBEng.TabIndex = 13;
             // 
             // label7
             // 
@@ -344,23 +344,23 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Resposta B)";
             // 
-            // textBox8
+            // textBoxRespostaAEng
             // 
-            this.textBox8.Location = new System.Drawing.Point(9, 111);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(254, 20);
-            this.textBox8.TabIndex = 12;
+            this.textBoxRespostaAEng.Location = new System.Drawing.Point(9, 111);
+            this.textBoxRespostaAEng.Name = "textBoxRespostaAEng";
+            this.textBoxRespostaAEng.Size = new System.Drawing.Size(254, 20);
+            this.textBoxRespostaAEng.TabIndex = 12;
             // 
             // groupBoxCAT
             // 
             this.groupBoxCAT.Controls.Add(this.labelPregunta);
-            this.groupBoxCAT.Controls.Add(this.textBoxPregunta);
+            this.groupBoxCAT.Controls.Add(this.textBoxPreguntaCat);
             this.groupBoxCAT.Controls.Add(this.labelRespostaA);
-            this.groupBoxCAT.Controls.Add(this.textBoxRespostaA);
-            this.groupBoxCAT.Controls.Add(this.textBoxRespostaC);
+            this.groupBoxCAT.Controls.Add(this.textBoxRespostaACat);
+            this.groupBoxCAT.Controls.Add(this.textBoxRespostaCCat);
             this.groupBoxCAT.Controls.Add(this.labelRespostaB);
             this.groupBoxCAT.Controls.Add(this.labelRespostaC);
-            this.groupBoxCAT.Controls.Add(this.textBoxRespostaB);
+            this.groupBoxCAT.Controls.Add(this.textBoxRespostaBCat);
             this.groupBoxCAT.Location = new System.Drawing.Point(12, 12);
             this.groupBoxCAT.Name = "groupBoxCAT";
             this.groupBoxCAT.Size = new System.Drawing.Size(264, 222);
@@ -405,12 +405,12 @@
         #endregion
 
         private System.Windows.Forms.Label labelPregunta;
-        private System.Windows.Forms.TextBox textBoxPregunta;
-        private System.Windows.Forms.TextBox textBoxRespostaA;
+        private System.Windows.Forms.TextBox textBoxPreguntaCat;
+        private System.Windows.Forms.TextBox textBoxRespostaACat;
         private System.Windows.Forms.Label labelRespostaA;
-        private System.Windows.Forms.TextBox textBoxRespostaB;
+        private System.Windows.Forms.TextBox textBoxRespostaBCat;
         private System.Windows.Forms.Label labelRespostaB;
-        private System.Windows.Forms.TextBox textBoxRespostaC;
+        private System.Windows.Forms.TextBox textBoxRespostaCCat;
         private System.Windows.Forms.Label labelRespostaC;
         private System.Windows.Forms.RadioButton radioButtonA;
         private System.Windows.Forms.RadioButton radioButtonB;
@@ -418,23 +418,23 @@
         private System.Windows.Forms.GroupBox groupBoxRespostaCorrecta;
         private System.Windows.Forms.Button buttonDesar;
         private System.Windows.Forms.GroupBox groupBoxESP;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxRespostaCEsp;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxPreguntaEsp;
+        private System.Windows.Forms.TextBox textBoxRespostaBEsp;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxRespostaAEsp;
         private System.Windows.Forms.GroupBox groupBoxENG;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxRespostaCEng;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxPreguntaEng;
+        private System.Windows.Forms.TextBox textBoxRespostaBEng;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxRespostaAEng;
         private System.Windows.Forms.GroupBox groupBoxCAT;
         private System.Windows.Forms.Button buttonTancar;
     }

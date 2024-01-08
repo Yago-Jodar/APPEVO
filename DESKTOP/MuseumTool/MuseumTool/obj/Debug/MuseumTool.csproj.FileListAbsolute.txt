@@ -80,3 +80,4 @@ C:\Users\User\Documents\GitHub\APPEVO\DESKTOP\MuseumTool\MuseumTool\obj\Debug\Mu
 C:\Users\User\Documents\GitHub\APPEVO\DESKTOP\MuseumTool\MuseumTool\obj\Debug\MuseumTool.exe
 C:\Users\User\Documents\GitHub\APPEVO\DESKTOP\MuseumTool\MuseumTool\obj\Debug\MuseumTool.pdb
 C:\Users\User\Documents\GitHub\APPEVO\DESKTOP\MuseumTool\MuseumTool\obj\Debug\MuseumTool.Form7.resources
+C:\Users\yagoj\Documents\GitHub\APPEVO\DESKTOP\MuseumTool\MuseumTool\obj\Debug\MuseumTool.Form7.resources

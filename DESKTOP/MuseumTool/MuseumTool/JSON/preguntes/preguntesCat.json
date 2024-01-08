@@ -1,0 +1,16 @@
+[
+  {
+    "preguntaesp": "¿Hotel?",
+    "respAesp": "Trivago",
+    "respBesp": "Melvin",
+    "respCesp": "Booking",
+    "respCorrecta": 0
+  },
+  {
+    "preguntaesp": "we ball?",
+    "respAesp": "nuh, uh",
+    "respBesp": "on steam?",
+    "respCesp": "WE BALL",
+    "respCorrecta": 2
+  }
+]
