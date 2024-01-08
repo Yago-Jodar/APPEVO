@@ -1,5 +1,7 @@
 package com.example.appevo09
 
+import java.io.Serializable
+
 class Vehicle ( val numInventari: Int,
                 val ambit: String?,
                 val colleccio: String?,
@@ -22,4 +24,4 @@ class Vehicle ( val numInventari: Int,
                 val alcada: Float?,
                 val envergadura: Float?,
 
-)
+) : Serializable

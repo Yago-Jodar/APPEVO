@@ -26,18 +26,15 @@ class VehicleActivity : AppCompatActivity() {
         val clickBack: ImageButton = findViewById(R.id.clickBack)
 
         clickBack.setOnClickListener {
-            val intent = Intent(this@VehicleActivity, MainActivity::class.java)
-
-            // Limpiar la pila de actividades y empezar con la nueva actividad
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
-            startActivity(intent)
             finish() // Finalizar la actividad actual
         }
 
-        vehicle = cargarVehiculoDesdeJSON("vehiculos_data.json", 0) ?: Vehicle() // Selecciona el primer vehículo (índice 0) o proporciona un objeto vacío
+        vehicle = cargarVehiculoDesdeJSON("vehiculos_data.json", 0) ?: Vehicle()
+        // Selecciona el primer vehículo (índice 0) o proporciona un objeto vacío
 
         mostrarInformacionVehiculo()
     }
+
 
     private fun cargarVehiculoDesdeJSON(fileName: String, indice: Int): Vehicle? {
         val jsonString = getVehicleFromJson()
@@ -65,14 +62,14 @@ class VehicleActivity : AppCompatActivity() {
                 } ?: mutableListOf(),
                 descripcio = json.optString("descripcio"),
                 any = json.optInt("any"),
-                cicle = json.optInt("cicle", null),
-                velocitatMax = json.optInt("velocitatMax", null),
-                velocitatCreuer = json.optInt("velocitatCreuer", null),
-                capacitatDeposit = json.optInt("capacitatDeposit", null),
-                llongitud = json.optDouble("llongitud", null)?.toFloat(),
-                alcada = json.optDouble("alcada", null)?.toFloat(),
-                envergadura = json.optDouble("envergadura", null)?.toFloat()
-            )
+                cicle = json.optInt("cicle"),
+                cilindrada = json.optInt("cilindrada"),
+                velocitatMax = json.optInt("velocitatMax"),
+                velocitatCreuer = json.optInt("velocitatCreuer"),
+                capacitatDeposit = json.optInt("capacitatDeposit"),
+                llongitud = json.optDouble("llongitud")?.toFloat(),
+                alcada = json.optDouble("alcada")?.toFloat(),
+                envergadura = json.optDouble("envergadura")?.toFloat())
         } catch (e: JSONException) {
             e.printStackTrace()
             null

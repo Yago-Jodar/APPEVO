@@ -42,7 +42,9 @@ class MainActivity : AppCompatActivity() {
 
             // Crear un Intent para pasar de MainActivity a VehicleActivity
             val intent = Intent(this@MainActivity, VehicleActivity::class.java)
+            //Añadir el putExtra()
 
+            
             // Iniciar la nueva actividad
             startActivity(intent)
         }
