@@ -121,7 +121,7 @@
             android:layout_marginTop="20dp">
 
             <ImageView
-                android:id="@+id/imgMultimedia"
+                android:id="@+id/imgVehicleMultimedia"
                 android:layout_width="0sp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -158,7 +158,7 @@
                         android:paddingTop="10dp">
 
                         <TextView
-                            android:id="@+id/txtNumInventari"
+                            android:id="@+id/txtVehicleNumInventari"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -166,7 +166,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtAny"
+                            android:id="@+id/txtVehicleAny"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -174,7 +174,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtLlocDeFabricacio"
+                            android:id="@+id/txtVehicleLlocDeFabricacio"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -182,7 +182,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtProcedencia"
+                            android:id="@+id/txtVehicleProcedencia"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -190,7 +190,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtFontEnergia"
+                            android:id="@+id/txtVehicleFontEnergia"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -198,7 +198,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtLlongitud"
+                            android:id="@+id/txtVehicleLlongitud"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -206,7 +206,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtEnvergadura"
+                            android:id="@+id/txtVehicleEnvergadura"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -214,7 +214,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtPes"
+                            android:id="@+id/txtVehiclePes"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -222,7 +222,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtCicle"
+                            android:id="@+id/txtVehicleCicle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -230,7 +230,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtCilindrada"
+                            android:id="@+id/txtVehicleCilindrada"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -238,7 +238,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtPotencia"
+                            android:id="@+id/txtVehiclePotencia"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -246,7 +246,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtVelocitatMax"
+                            android:id="@+id/txtVehicleVelocitatMax"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -254,7 +254,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtVelocitatCreuer"
+                            android:id="@+id/txtVehicleVelocitatCreuer"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -262,7 +262,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtAutonomia"
+                            android:id="@+id/txtVehicleAutonomia"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -270,7 +270,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtCapacitatDeposit"
+                            android:id="@+id/txtVehicleCapacitatDeposit"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -278,7 +278,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtSostreMaximDeVol"
+                            android:id="@+id/txtVehicleSostreMaximDeVol"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -286,7 +286,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtFormaIngres"
+                            android:id="@+id/txtVehicleFormaIngres"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -294,7 +294,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtFontIngres"
+                            android:id="@+id/txtVehicleFontIngres"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -302,7 +302,7 @@
                             android:textSize="22sp"/>
 
                         <TextView
-                            android:id="@+id/txtAlcada"
+                            android:id="@+id/txtVehicleAlcada"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -329,25 +329,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                     <TextView
-                        android:id="@+id/txtDescripcio"
+                        android:id="@+id/txtVehicleDescripcio"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Maquetaa escala 1:2 de l'avió d'origen soviètic,
-molt maniobrable i amb gran velocitat d'ascens.
-Va ser dissenyat per l'enginyer Nikolái Nikoláyevich
-Polikárpovi l'any 1934 es va començar a produir
-en sèrie.
-A Espanya, va ser batejat amb el sobrenom de
-'Xato' pel seu perfil curt, mentre que a lURSS era
-conegut com a 'Chaika' (gavina). Durant la
-Guerra Civil Espanyola van destacar en la defensa
-de Madrid i en les batalles del Jarama i de
-Guadalajara. A les forces aèries de l'URSS, entre
-1938i 1939, van operar
-contra els japonesos i del
-1939 al 1940 van tenir
-una actuació destacada
-a Finlàndia."
+
                         android:textSize="25sp"
                         android:padding="10dp"
                         android:layout_marginRight="20dp"

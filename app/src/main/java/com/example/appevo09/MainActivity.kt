@@ -53,12 +53,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun getAmbitsFromJson(): MutableList<Ambit> {
-        val jsonFilePath = getFilesDir().toString() + "/json/ambits.json"
+        val jsonFilePath = getFilesDir().toString() + "/json/ambits_cat.json"
         val jsonFile = FileReader(jsonFilePath)
         val listAmbitsType = object : TypeToken<MutableList<Ambit>>() {}.type
         val ambits: MutableList<Ambit> = Gson().fromJson(jsonFile, listAmbitsType)
         return ambits
     }
+
+
+
 
     //Cambiar la UI de un ámbito a otro.
     fun cambiarUI() {

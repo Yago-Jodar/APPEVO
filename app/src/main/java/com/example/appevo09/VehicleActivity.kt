@@ -23,13 +23,14 @@ class VehicleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.info_vehicle)
 
-        val clickBack: ImageButton = findViewById(R.id.clickBack)
 
+
+        val clickBack: ImageButton = findViewById(R.id.clickBack)
         clickBack.setOnClickListener {
             finish() // Finalizar la actividad actual
         }
 
-        vehicle = cargarVehiculoDesdeJSON("vehiculos_data.json", 0) ?: Vehicle()
+        //vehicle = cargarVehiculoDesdeJSON("vehiculos_data.json", 0) ?: Vehicle()
         // Selecciona el primer vehículo (índice 0) o proporciona un objeto vacío
 
         mostrarInformacionVehiculo()
@@ -85,27 +86,27 @@ class VehicleActivity : AppCompatActivity() {
     }
 
     private fun mostrarInformacionVehiculo() {
-        val textViewNumInventari: TextView = findViewById(R.id.txtNumInventari)
+        val textViewNumInventari: TextView = findViewById(R.id.txtVehicleNumInventari)
         //val textViewAmbit: TextView = findViewById(R.id.txtAmbit)
         //val textViewColleccio: TextView = findViewById(R.id.textViewColleccio)
         val textViewNom: TextView = findViewById(R.id.txtNom)
-        val textViewLlocFabricacio: TextView = findViewById(R.id.txtLlocDeFabricacio)
-        val textViewProcedencia: TextView = findViewById(R.id.txtProcedencia)
-        val textViewFontEnergia: TextView = findViewById(R.id.txtFontEnergia)
-        val textViewPotencia: TextView = findViewById(R.id.txtPotencia)
-        val textViewFormaIngres: TextView = findViewById(R.id.txtFormaIngres)
-        val textViewFontIngres: TextView = findViewById(R.id.txtFontIngres)
-        val textViewMultimedia: ImageView = findViewById(R.id.imgMultimedia)
-        val textViewDescripcio: TextView = findViewById(R.id.txtDescripcio)
-        val textViewAny: TextView = findViewById(R.id.txtAny)
-        val textViewCicle: TextView = findViewById(R.id.txtCicle)
-        val textViewCilindrada: TextView = findViewById(R.id.txtCilindrada)
-        val textViewVelocitatMax: TextView = findViewById(R.id.txtVelocitatMax)
-        val textViewVelocitatCreuer: TextView = findViewById(R.id.txtVelocitatCreuer)
-        val textViewCapacitatDeposit: TextView = findViewById(R.id.txtCapacitatDeposit)
-        val textViewLlongitud: TextView = findViewById(R.id.txtLlongitud)
-        val textViewAlcada: TextView = findViewById(R.id.txtAlcada)
-        val textViewEnvergadura: TextView = findViewById(R.id.txtEnvergadura)
+        val textViewLlocFabricacio: TextView = findViewById(R.id.txtVehicleLlocDeFabricacio)
+        val textViewProcedencia: TextView = findViewById(R.id.txtVehicleProcedencia)
+        val textViewFontEnergia: TextView = findViewById(R.id.txtVehicleFontEnergia)
+        val textViewPotencia: TextView = findViewById(R.id.txtVehiclePotencia)
+        val textViewFormaIngres: TextView = findViewById(R.id.txtVehicleFormaIngres)
+        val textViewFontIngres: TextView = findViewById(R.id.txtVehicleFontIngres)
+        val textViewMultimedia: ImageView = findViewById(R.id.imgVehicleMultimedia)
+        val textViewDescripcio: TextView = findViewById(R.id.txtVehicleDescripcio)
+        val textViewAny: TextView = findViewById(R.id.txtVehicleAny)
+        val textViewCicle: TextView = findViewById(R.id.txtVehicleCicle)
+        val textViewCilindrada: TextView = findViewById(R.id.txtVehicleCilindrada)
+        val textViewVelocitatMax: TextView = findViewById(R.id.txtVehicleVelocitatMax)
+        val textViewVelocitatCreuer: TextView = findViewById(R.id.txtVehicleVelocitatCreuer)
+        val textViewCapacitatDeposit: TextView = findViewById(R.id.txtVehicleCapacitatDeposit)
+        val textViewLlongitud: TextView = findViewById(R.id.txtVehicleLlongitud)
+        val textViewAlcada: TextView = findViewById(R.id.txtVehicleAlcada)
+        val textViewEnvergadura: TextView = findViewById(R.id.txtVehicleEnvergadura)
 
         // Muestra u oculta TextViews según la disponibilidad de datos
         textViewNumInventari.visibility = View.VISIBLE
