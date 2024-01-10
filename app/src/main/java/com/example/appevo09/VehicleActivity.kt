@@ -1,6 +1,6 @@
 package com.example.appevo09
 
-// VehicleActivity.kt
+//VehicleActivity.kt
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -34,6 +34,22 @@ class VehicleActivity : AppCompatActivity() {
         // Selecciona el primer vehículo (índice 0) o proporciona un objeto vacío
 
         mostrarInformacionVehiculo()
+    }
+
+
+    fun obtenerIdPorNombre(nombreBuscado: String) {
+        val ambits = getAmbitsFromJson()
+
+        // Iterar sobre la lista de ámbitos
+        for (ambito in ambits) {
+            // Verificar si el nombre del ámbito coincide con el nombre buscado
+            if (ambito.nombre == nombreBuscado) {
+                // Encontrado el ámbito con el nombre buscado, obtener el id
+                val idAmbito: String = ambito.id
+                otraFuncionQueUsaId(idAmbito)
+                return  // Puedes salir del bucle si ya encontraste el ámbito
+            }
+        }
     }
 
 

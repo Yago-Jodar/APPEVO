@@ -60,6 +60,13 @@ class MainActivity : AppCompatActivity() {
         return ambits
     }
 
+    fun getIdAmbitFromJson(): MutableList<Ambit> {
+        val jsonFilePath = getFilesDir().toString() + "/json/ambits_cat.json"
+        val jsonFile = FileReader(jsonFilePath)
+        val listAmbitsType = object : TypeToken<MutableList<Ambit>>() {}.type
+        return Gson().fromJson(jsonFile, listAmbitsType)
+    }
+
 
 
 
